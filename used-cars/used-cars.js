@@ -893,5 +893,5 @@ function openCarDetails(carId, carTitle, carPrice) {
     price: carPrice,
   });
 
-  window.location.href = `../car-details/index.html?${params.toString()}`;
+  window.location.href = `../car-details/car-details.html?${params.toString()}`;
 }
