@@ -1,0 +1,1848 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Post Your Car Ad - Sell Your Car Fast | 7 States</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="post-car-ad.css" />
+  </head>
+  <body style="background-color: #f4f4f4">
+    <!-- Header -->
+    <header class="bg-white shadow-sm">
+      <div class="container-fluid px-4 py-3">
+        <div class="d-flex align-items-center justify-content-between">
+          <!-- Section 1: Logo + Location (Left) -->
+          <div class="d-flex align-items-center gap-3">
+            <a href="../index.html">
+              <h2 class="mb-0 fw-bold text-dark">7 States</h2>
+            </a>
+            <div class="dropdown d-none d-md-block">
+              <button
+                class="btn btn-outline-secondary dropdown-toggle d-flex align-items-center gap-2"
+                type="button"
+                data-bs-toggle="dropdown"
+              >
+                <svg
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-geo-alt"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="m12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"
+                  />
+                  <path
+                    d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"
+                  />
+                </svg>
+                UAE
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">UAE</a></li>
+                <li><a class="dropdown-item" href="#">Dubai</a></li>
+                <li><a class="dropdown-item" href="#">Abu Dhabi</a></li>
+                <li><a class="dropdown-item" href="#">Sharjah</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Section 2: Navigation Menu (Center) -->
+          <nav class="d-none d-lg-block">
+            <ul class="nav">
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle text-dark fw-medium"
+                  href="#"
+                  data-bs-toggle="dropdown"
+                >
+                  Used cars
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="../used-cars/used-cars.html"
+                      >All Used Cars</a
+                    >
+                  </li>
+                  <li><a class="dropdown-item" href="#">By Make</a></li>
+                  <li><a class="dropdown-item" href="#">By Model</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark fw-medium" href="#">New Cars</a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link text-dark fw-medium"
+                  href="../value-my-car/value-my-car.html"
+                  >Value my car</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle text-dark fw-medium"
+                  href="#"
+                  data-bs-toggle="dropdown"
+                >
+                  More
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Car Insurance</a></li>
+                  <li><a class="dropdown-item" href="#">Car Loans</a></li>
+                  <li><a class="dropdown-item" href="#">Car Service</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+
+          <!-- Section 3: Auth + Sell Button (Right) -->
+          <div class="d-flex align-items-center gap-3">
+            <!-- Desktop Auth Links -->
+            <div class="d-none d-lg-flex align-items-center gap-3">
+              <a
+                href="../login/login.html"
+                class="text-decoration-none text-dark fw-medium d-flex align-items-center gap-1"
+              >
+                Login
+                <svg
+                  width="12"
+                  height="12"
+                  fill="currentColor"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="../signup/signup.html"
+                class="text-decoration-none text-dark fw-medium d-flex align-items-center gap-1"
+              >
+                Sign Up
+                <svg
+                  width="12"
+                  height="12"
+                  fill="currentColor"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"
+                  />
+                </svg>
+              </a>
+            </div>
+
+            <!-- Sell My Car Button -->
+            <button
+              class="btn btn-primary d-flex align-items-center gap-2 px-4 py-2 rounded-pill"
+              onclick="window.location.href='../sell-my-car/sell-my-car.html'"
+            >
+              <svg
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-plus-circle"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
+                />
+                <path
+                  d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"
+                />
+              </svg>
+              Sell My Car
+            </button>
+
+            <!-- Mobile Menu Toggle -->
+            <button
+              class="btn d-lg-none"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#mobileMenu"
+            >
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container-fluid py-5">
+      <div class="row justify-content-center">
+        <div class="col-12 col-lg-10 col-xl-8">
+          <!-- Car Illustration and Stepper Container -->
+          <div class="form-container">
+            <!-- Car Illustration Section -->
+            <div class="">
+              <img
+                style="width: 100%; height: auto"
+                src="../images/sellCarForm.png"
+                alt=""
+              />
+            </div>
+
+            <!-- Stepper -->
+            <div class="stepper-container">
+              <div class="stepper">
+                <div class="step active" data-step="1">
+                  <div class="step-number">1</div>
+                  <div class="step-label">Car Details</div>
+                </div>
+                <div class="step" data-step="2">
+                  <div class="step-number">2</div>
+                  <div class="step-label">Features</div>
+                </div>
+                <div class="step" data-step="3">
+                  <div class="step-number">3</div>
+                  <div class="step-label">Add Photos</div>
+                </div>
+                <div class="step" data-step="4">
+                  <div class="step-number">4</div>
+                  <div class="step-label">Additional Details</div>
+                </div>
+                <div class="step" data-step="5">
+                  <div class="step-number">5</div>
+                  <div class="step-label">Review</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Form Content -->
+            <div class="form-content">
+              <!-- Step 1: Car Details -->
+              <div class="step-content active" id="step-1">
+                <div class="form-section">
+                  <h3 class="form-title">Tell us about your car</h3>
+
+                  <div class="row">
+                    <div class="col-md-6 mb-3">
+                      <label class="form-label">Make</label>
+                      <select class="form-select" id="make" required>
+                        <option value="">Select</option>
+                        <option value="toyota">Toyota</option>
+                        <option value="honda">Honda</option>
+                        <option value="nissan">Nissan</option>
+                        <option value="mercedes">Mercedes-Benz</option>
+                        <option value="bmw">BMW</option>
+                        <option value="audi">Audi</option>
+                        <option value="lexus">Lexus</option>
+                        <option value="ford">Ford</option>
+                        <option value="chevrolet">Chevrolet</option>
+                        <option value="hyundai">Hyundai</option>
+                      </select>
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                      <label class="form-label">Model</label>
+                      <select class="form-select" id="model" required>
+                        <option value="">Select</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-6 mb-3">
+                      <label class="form-label">Variant</label>
+                      <select class="form-select" id="variant" required>
+                        <option value="">Select</option>
+                      </select>
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                      <label class="form-label">Year of Manufacture</label>
+                      <select class="form-select" id="year" required>
+                        <option value="">Select</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-6 mb-3">
+                      <label class="form-label">Mileage</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="mileage"
+                        placeholder="For Eg. 52,000 Km"
+                        required
+                      />
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                      <label class="form-label">Fuel Type</label>
+                      <select class="form-select" id="fuelType" required>
+                        <option value="">Select</option>
+                        <option value="petrol">Petrol</option>
+                        <option value="diesel">Diesel</option>
+                        <option value="hybrid">Hybrid</option>
+                        <option value="electric">Electric</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-6 mb-3">
+                      <label class="form-label">Transmission</label>
+                      <select class="form-select" id="transmission" required>
+                        <option value="">Select</option>
+                        <option value="automatic">Automatic</option>
+                        <option value="manual">Manual</option>
+                        <option value="cvt">CVT</option>
+                      </select>
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                      <label class="form-label">Ownership</label>
+                      <select class="form-select" id="ownership" required>
+                        <option value="">Select</option>
+                        <option value="first">First Owner</option>
+                        <option value="second">Second Owner</option>
+                        <option value="third">Third Owner</option>
+                        <option value="fourth">Fourth Owner or More</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="form-label">Description</label>
+                    <textarea
+                      class="form-control"
+                      id="description"
+                      rows="5"
+                      placeholder="Tell us about your car"
+                      required
+                    ></textarea>
+                  </div>
+
+                  <div class="text-center">
+                    <button
+                      type="button"
+                      class="btn btn-primary next-btn"
+                      onclick="nextStep()"
+                    >
+                      Next
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Step 2: Features -->
+              <div class="step-content" id="step-2">
+                <div class="form-section">
+                  <h3 class="form-title">Features and Specifications</h3>
+
+                  <div class="features-modern-grid">
+                    <!-- Comfort & Convenience -->
+                    <div class="feature-category-modern">
+                      <h5 class="category-title">Comfort & Convenience</h5>
+                      <div class="feature-pills">
+                        <div class="feature-pill">
+                          <input
+                            type="checkbox"
+                            id="air-conditioning"
+                            class="feature-checkbox"
+                          />
+                          <label for="air-conditioning" class="feature-label">
+                            <i class="fas fa-snowflake"></i>
+                            Air Conditioning
+                          </label>
+                        </div>
+                        <div class="feature-pill">
+                          <input
+                            type="checkbox"
+                            id="power-windows"
+                            class="feature-checkbox"
+                          />
+                          <label for="power-windows" class="feature-label">
+                            <i class="fas fa-window-maximize"></i>
+                            Power Windows
+                          </label>
+                        </div>
+                        <div class="feature-pill">
+                          <input
+                            type="checkbox"
+                            id="sunroof-moonroof"
+                            class="feature-checkbox"
+                          />
+                          <label for="sunroof-moonroof" class="feature-label">
+                            <i class="fas fa-sun"></i>
+                            Sunroof / Moonroof
+                          </label>
+                        </div>
+                        <div class="feature-pill">
+                          <input
+                            type="checkbox"
+                            id="cruise-control"
+                            class="feature-checkbox"
+                          />
+                          <label for="cruise-control" class="feature-label">
+                            <i class="fas fa-tachometer-alt"></i>
+                            Cruise Control
+                          </label>
+                        </div>
+                        <div class="feature-pill">
+                          <input
+                            type="checkbox"
+                            id="keyless-entry"
+                            class="feature-checkbox"
+                          />
+                          <label for="keyless-entry" class="feature-label">
+                            <i class="fas fa-key"></i>
+                            Keyless Entry
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Safety -->
+                    <div class="feature-category-modern">
+                      <h5 class="category-title">Safety</h5>
+                      <div class="feature-pills">
+                        <div class="feature-pill">
+                          <input
+                            type="checkbox"
+                            id="abs-braking"
+                            class="feature-checkbox"
+                          />
+                          <label for="abs-braking" class="feature-label">
+                            <i class="fas fa-shield-alt"></i>
+                            ABS (Anti-lock Braking System)
+                          </label>
+                        </div>
+                        <div class="feature-pill">
+                          <input
+                            type="checkbox"
+                            id="airbags"
+                            class="feature-checkbox"
+                          />
+                          <label for="airbags" class="feature-label">
+                            <i class="fas fa-life-ring"></i>
+                            Airbags
+                          </label>
+                        </div>
+                        <div class="feature-pill">
+                          <input
+                            type="checkbox"
+                            id="parking-sensors"
+                            class="feature-checkbox"
+                          />
+                          <label for="parking-sensors" class="feature-label">
+                            <i class="fas fa-parking"></i>
+                            Parking Sensors
+                          </label>
+                        </div>
+                        <div class="feature-pill">
+                          <input
+                            type="checkbox"
+                            id="rear-view-mirror"
+                            class="feature-checkbox"
+                          />
+                          <label for="rear-view-mirror" class="feature-label">
+                            <i class="fas fa-eye"></i>
+                            Rear View Mirror
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Technology & Entertainment -->
+                    <div class="feature-category-modern">
+                      <h5 class="category-title">Technology & Entertainment</h5>
+                      <div class="feature-pills">
+                        <div class="feature-pill">
+                          <input
+                            type="checkbox"
+                            id="touchscreen-display"
+                            class="feature-checkbox"
+                          />
+                          <label
+                            for="touchscreen-display"
+                            class="feature-label"
+                          >
+                            <i class="fas fa-tablet-alt"></i>
+                            Touchscreen Display
+                          </label>
+                        </div>
+                        <div class="feature-pill">
+                          <input
+                            type="checkbox"
+                            id="bluetooth-connectivity"
+                            class="feature-checkbox"
+                          />
+                          <label
+                            for="bluetooth-connectivity"
+                            class="feature-label"
+                          >
+                            <i class="fab fa-bluetooth"></i>
+                            Bluetooth Connectivity
+                          </label>
+                        </div>
+                        <div class="feature-pill">
+                          <input
+                            type="checkbox"
+                            id="apple-carplay"
+                            class="feature-checkbox"
+                          />
+                          <label for="apple-carplay" class="feature-label">
+                            <i class="fab fa-apple"></i>
+                            Apple CarPlay / Android Auto
+                          </label>
+                        </div>
+                        <div class="feature-pill">
+                          <input
+                            type="checkbox"
+                            id="navigation-system"
+                            class="feature-checkbox"
+                          />
+                          <label for="navigation-system" class="feature-label">
+                            <i class="fas fa-map-marked-alt"></i>
+                            Navigation System
+                          </label>
+                        </div>
+                        <div class="feature-pill">
+                          <input
+                            type="checkbox"
+                            id="premium-sound"
+                            class="feature-checkbox"
+                          />
+                          <label for="premium-sound" class="feature-label">
+                            <i class="fas fa-music"></i>
+                            Premium Sound System
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Performance -->
+                    <div class="feature-category-modern">
+                      <h5 class="category-title">Performance</h5>
+                      <div class="feature-pills">
+                        <div class="feature-pill">
+                          <input
+                            type="checkbox"
+                            id="awd-4wd"
+                            class="feature-checkbox"
+                          />
+                          <label for="awd-4wd" class="feature-label">
+                            <i class="fas fa-road"></i>
+                            AWD / 4WD
+                          </label>
+                        </div>
+                        <div class="feature-pill">
+                          <input
+                            type="checkbox"
+                            id="turbo-engine"
+                            class="feature-checkbox"
+                          />
+                          <label for="turbo-engine" class="feature-label">
+                            <i class="fas fa-tachometer-alt"></i>
+                            Turbocharged Engine
+                          </label>
+                        </div>
+                        <div class="feature-pill">
+                          <input
+                            type="checkbox"
+                            id="paddle-shifters"
+                            class="feature-checkbox"
+                          />
+                          <label for="paddle-shifters" class="feature-label">
+                            <i class="fas fa-cogs"></i>
+                            Paddle Shifters
+                          </label>
+                        </div>
+                        <div class="feature-pill">
+                          <input
+                            type="checkbox"
+                            id="sport-mode"
+                            class="feature-checkbox"
+                          />
+                          <label for="sport-mode" class="feature-label">
+                            <i class="fas fa-flag-checkered"></i>
+                            Sport Mode
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Exterior -->
+                    <div class="feature-category-modern">
+                      <h5 class="category-title">Exterior</h5>
+                      <div class="feature-pills">
+                        <div class="feature-pill">
+                          <input
+                            type="checkbox"
+                            id="alloy-wheels"
+                            class="feature-checkbox"
+                          />
+                          <label for="alloy-wheels" class="feature-label">
+                            <i class="fas fa-circle"></i>
+                            Alloy Wheels
+                          </label>
+                        </div>
+                        <div class="feature-pill">
+                          <input
+                            type="checkbox"
+                            id="fog-lights"
+                            class="feature-checkbox"
+                          />
+                          <label for="fog-lights" class="feature-label">
+                            <i class="fas fa-lightbulb"></i>
+                            Fog Lights
+                          </label>
+                        </div>
+                        <div class="feature-pill">
+                          <input
+                            type="checkbox"
+                            id="led-headlights"
+                            class="feature-checkbox"
+                          />
+                          <label for="led-headlights" class="feature-label">
+                            <i class="fas fa-lightbulb"></i>
+                            LED Headlights
+                          </label>
+                        </div>
+                        <div class="feature-pill">
+                          <input
+                            type="checkbox"
+                            id="roof-rails"
+                            class="feature-checkbox"
+                          />
+                          <label for="roof-rails" class="feature-label">
+                            <i class="fas fa-car"></i>
+                            Roof Rails
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Add Custom Feature -->
+                    <div class="feature-category-modern">
+                      <h5 class="category-title">Add your custom feature</h5>
+                      <p class="text-muted small mb-3">
+                        Didn't find your feature? Add your own.
+                      </p>
+                      <div class="custom-feature-input">
+                        <div class="input-group">
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="custom-feature"
+                            placeholder="Enter Feature"
+                          />
+                          <button
+                            class="btn btn-success"
+                            type="button"
+                            onclick="addCustomFeature()"
+                          >
+                            <i class="fas fa-plus"></i>
+                          </button>
+                        </div>
+                        <div
+                          class="custom-features-list mt-2"
+                          id="custom-features-list"
+                        >
+                          <!-- Custom features will be added here -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="text-center mt-4">
+                    <button
+                      type="button"
+                      class="btn btn-outline-secondary me-3"
+                      onclick="prevStep()"
+                    >
+                      Previous
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-primary next-btn"
+                      onclick="nextStep()"
+                    >
+                      Next
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Step 3: Add Photos -->
+              <div class="step-content" id="step-3">
+                <div class="form-section">
+                  <h3 class="form-title">Add photos to attract buyers</h3>
+                  <div class="photo-tip mb-4">
+                    <i class="fas fa-lightbulb text-warning me-2"></i>
+                    <span
+                      ><strong>Tip:</strong> Add at least 5 photos (front, back,
+                      interior, dashboard, tyres).</span
+                    >
+                  </div>
+
+                  <div class="photos-section">
+                    <!-- Cover Photos Section -->
+                    <div class="cover-photos-section mb-4">
+                      <h4 class="section-title">Cover Photos</h4>
+                      <div class="cover-photo-container">
+                        <div class="cover-photo-upload" id="cover-photo">
+                          <!-- Sample uploaded cover photo -->
+                          <div class="uploaded-photo-container">
+                            <img
+                              src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=400&h=250&fit=crop&crop=center"
+                              alt="Cover Photo"
+                              class="uploaded-photo"
+                            />
+                            <div class="photo-menu-container">
+                              <button
+                                type="button"
+                                class="photo-menu-btn"
+                                onclick="togglePhotoMenu(this)"
+                              >
+                                <i class="fas fa-ellipsis-h"></i>
+                              </button>
+                              <div class="photo-menu" style="display: none">
+                                <button
+                                  type="button"
+                                  class="menu-item"
+                                  onclick="replacePhoto('cover')"
+                                >
+                                  <i class="fas fa-sync-alt"></i> Replace
+                                </button>
+                                <button
+                                  type="button"
+                                  class="menu-item"
+                                  onclick="setCoverPhoto('cover')"
+                                >
+                                  <i class="fas fa-star"></i> Set Cover Photo
+                                </button>
+                                <button
+                                  type="button"
+                                  class="menu-item delete"
+                                  onclick="deletePhoto('cover')"
+                                >
+                                  <i class="fas fa-trash"></i> Delete
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                          <input
+                            type="file"
+                            id="cover-photo-input"
+                            accept="image/*"
+                            style="display: none"
+                          />
+                        </div>
+                        <small class="upload-info"
+                          >We accept .jpg & .png format under 5 mb</small
+                        >
+                      </div>
+                    </div>
+
+                    <!-- Additional Photos Section -->
+                    <div class="additional-photos-section">
+                      <h4 class="section-title">Photos</h4>
+                      <div class="photos-grid">
+                        <!-- Photo 1 - Uploaded -->
+                        <div
+                          class="photo-upload-item uploaded"
+                          data-photo-index="1"
+                        >
+                          <div class="uploaded-photo-container">
+                            <img
+                              src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=300&h=200&fit=crop&crop=left"
+                              alt="Photo 1"
+                              class="uploaded-photo"
+                            />
+                            <div class="photo-menu-container">
+                              <button
+                                type="button"
+                                class="photo-menu-btn"
+                                onclick="togglePhotoMenu(this)"
+                              >
+                                <i class="fas fa-ellipsis-h"></i>
+                              </button>
+                              <div class="photo-menu" style="display: none">
+                                <button
+                                  type="button"
+                                  class="menu-item"
+                                  onclick="replacePhoto('1')"
+                                >
+                                  <i class="fas fa-sync-alt"></i> Replace
+                                </button>
+                                <button
+                                  type="button"
+                                  class="menu-item"
+                                  onclick="setCoverPhoto('1')"
+                                >
+                                  <i class="fas fa-star"></i> Set Cover Photo
+                                </button>
+                                <button
+                                  type="button"
+                                  class="menu-item delete"
+                                  onclick="deletePhoto('1')"
+                                >
+                                  <i class="fas fa-trash"></i> Delete
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                          <input
+                            type="file"
+                            id="photo-1"
+                            accept="image/*"
+                            style="display: none"
+                          />
+                        </div>
+
+                        <!-- Photo 2 - Uploaded -->
+                        <div
+                          class="photo-upload-item uploaded"
+                          data-photo-index="2"
+                        >
+                          <div class="uploaded-photo-container">
+                            <img
+                              src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=300&h=200&fit=crop&crop=right"
+                              alt="Photo 2"
+                              class="uploaded-photo"
+                            />
+                            <div class="photo-menu-container">
+                              <button
+                                type="button"
+                                class="photo-menu-btn"
+                                onclick="togglePhotoMenu(this)"
+                              >
+                                <i class="fas fa-ellipsis-h"></i>
+                              </button>
+                              <div class="photo-menu" style="display: none">
+                                <button
+                                  type="button"
+                                  class="menu-item"
+                                  onclick="replacePhoto('2')"
+                                >
+                                  <i class="fas fa-sync-alt"></i> Replace
+                                </button>
+                                <button
+                                  type="button"
+                                  class="menu-item"
+                                  onclick="setCoverPhoto('2')"
+                                >
+                                  <i class="fas fa-star"></i> Set Cover Photo
+                                </button>
+                                <button
+                                  type="button"
+                                  class="menu-item delete"
+                                  onclick="deletePhoto('2')"
+                                >
+                                  <i class="fas fa-trash"></i> Delete
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                          <input
+                            type="file"
+                            id="photo-2"
+                            accept="image/*"
+                            style="display: none"
+                          />
+                        </div>
+
+                        <!-- Photo 3 - Uploaded -->
+                        <div
+                          class="photo-upload-item uploaded"
+                          data-photo-index="3"
+                        >
+                          <div class="uploaded-photo-container">
+                            <img
+                              src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=300&h=200&fit=crop&crop=top"
+                              alt="Photo 3"
+                              class="uploaded-photo"
+                            />
+                            <div class="photo-menu-container">
+                              <button
+                                type="button"
+                                class="photo-menu-btn"
+                                onclick="togglePhotoMenu(this)"
+                              >
+                                <i class="fas fa-ellipsis-h"></i>
+                              </button>
+                              <div class="photo-menu" style="display: none">
+                                <button
+                                  type="button"
+                                  class="menu-item"
+                                  onclick="replacePhoto('3')"
+                                >
+                                  <i class="fas fa-sync-alt"></i> Replace
+                                </button>
+                                <button
+                                  type="button"
+                                  class="menu-item"
+                                  onclick="setCoverPhoto('3')"
+                                >
+                                  <i class="fas fa-star"></i> Set Cover Photo
+                                </button>
+                                <button
+                                  type="button"
+                                  class="menu-item delete"
+                                  onclick="deletePhoto('3')"
+                                >
+                                  <i class="fas fa-trash"></i> Delete
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                          <input
+                            type="file"
+                            id="photo-3"
+                            accept="image/*"
+                            style="display: none"
+                          />
+                        </div>
+
+                        <!-- Photo 4 - Uploaded -->
+                        <div
+                          class="photo-upload-item uploaded"
+                          data-photo-index="4"
+                        >
+                          <div class="uploaded-photo-container">
+                            <img
+                              src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=300&h=200&fit=crop&crop=bottom"
+                              alt="Photo 4"
+                              class="uploaded-photo"
+                            />
+                            <div class="photo-menu-container">
+                              <button
+                                type="button"
+                                class="photo-menu-btn"
+                                onclick="togglePhotoMenu(this)"
+                              >
+                                <i class="fas fa-ellipsis-h"></i>
+                              </button>
+                              <div class="photo-menu" style="display: none">
+                                <button
+                                  type="button"
+                                  class="menu-item"
+                                  onclick="replacePhoto('4')"
+                                >
+                                  <i class="fas fa-sync-alt"></i> Replace
+                                </button>
+                                <button
+                                  type="button"
+                                  class="menu-item"
+                                  onclick="setCoverPhoto('4')"
+                                >
+                                  <i class="fas fa-star"></i> Set Cover Photo
+                                </button>
+                                <button
+                                  type="button"
+                                  class="menu-item delete"
+                                  onclick="deletePhoto('4')"
+                                >
+                                  <i class="fas fa-trash"></i> Delete
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                          <input
+                            type="file"
+                            id="photo-4"
+                            accept="image/*"
+                            style="display: none"
+                          />
+                        </div>
+
+                        <!-- Photo 5 - Empty Slot -->
+                        <div
+                          class="photo-upload-item empty"
+                          data-photo-index="5"
+                        >
+                          <div
+                            class="upload-area"
+                            onclick="document.getElementById('photo-5').click()"
+                          >
+                            <i class="fas fa-plus"></i>
+                          </div>
+                          <input
+                            type="file"
+                            id="photo-5"
+                            accept="image/*"
+                            style="display: none"
+                          />
+                        </div>
+
+                        <!-- Photo 6 - Empty Slot -->
+                        <div
+                          class="photo-upload-item empty"
+                          data-photo-index="6"
+                        >
+                          <div
+                            class="upload-area"
+                            onclick="document.getElementById('photo-6').click()"
+                          >
+                            <i class="fas fa-plus"></i>
+                          </div>
+                          <input
+                            type="file"
+                            id="photo-6"
+                            accept="image/*"
+                            style="display: none"
+                          />
+                        </div>
+
+                        <!-- Add More Photo Slots -->
+                        <div class="add-photo-slot" onclick="addPhotoSlot()">
+                          <div class="add-photo-btn">
+                            <i class="fas fa-plus"></i>
+                          </div>
+                        </div>
+
+                        <div class="add-photo-slot" onclick="addPhotoSlot()">
+                          <div class="add-photo-btn">
+                            <i class="fas fa-plus"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="text-center mt-4">
+                    <button
+                      type="button"
+                      class="btn btn-outline-secondary me-3"
+                      onclick="prevStep()"
+                    >
+                      Previous
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-primary next-btn"
+                      onclick="nextStep()"
+                    >
+                      Next
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Photo Context Menu -->
+              <div
+                class="photo-context-menu"
+                id="photo-context-menu"
+                style="display: none"
+              >
+                <div class="menu-item" onclick="replacePhoto()">
+                  <i class="fas fa-sync-alt me-2"></i>
+                  Replace
+                </div>
+                <div class="menu-item" onclick="setCoverPhoto()">
+                  <i class="fas fa-star me-2"></i>
+                  Set Cover Photo
+                </div>
+                <div class="menu-item delete-item" onclick="deletePhoto()">
+                  <i class="fas fa-trash me-2"></i>
+                  Delete
+                </div>
+              </div>
+
+              <!-- Step 4: Selling Price & Contact Details -->
+              <div class="step-content" id="step-4">
+                <div class="form-section">
+                  <h3 class="form-title">Enter your Selling Price</h3>
+
+                  <!-- Price Section with Car Image -->
+                  <div class="price-section mb-5">
+                    <div class="row align-items-center">
+                      <div class="col-md-4">
+                        <div class="car-preview-image">
+                          <img
+                            src="https://via.placeholder.com/200x120/4A90E2/FFFFFF?text=Car+Preview"
+                            alt="Car Preview"
+                            class="img-fluid rounded"
+                          />
+                        </div>
+                      </div>
+                      <div class="col-md-8">
+                        <h5 class="mb-3">
+                          Share car price as per current condition
+                        </h5>
+                        <div class="price-input-section">
+                          <label class="form-label">Enter Selling Price</label>
+                          <div class="price-input-wrapper">
+                            <input
+                              type="number"
+                              class="form-control price-input"
+                              id="price"
+                              placeholder="For Eg. 112,000"
+                              required
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Seller Contact Details -->
+                  <div class="contact-section">
+                    <h4 class="section-title mb-4">Seller Contact Details</h4>
+
+                    <div class="row">
+                      <div class="col-md-6 mb-3">
+                        <label class="form-label">Seller Name</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="contactName"
+                          placeholder="For Eg. Omar Al Mansoori"
+                          required
+                        />
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <label class="form-label">Seller Phone Number</label>
+                        <input
+                          type="tel"
+                          class="form-control"
+                          id="contactPhone"
+                          placeholder="For Eg. +971 55 789 2345"
+                          required
+                        />
+                      </div>
+                    </div>
+
+                    <div class="mb-4">
+                      <label class="form-label">Seller Email Address</label>
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="contactEmail"
+                        placeholder="For Eg. Omaral321@gmail.com"
+                        required
+                      />
+                    </div>
+
+                    <!-- Contact Preferences -->
+                    <div class="contact-preferences">
+                      <h5 class="mb-3">How would you like to Contact?</h5>
+                      <div class="contact-options">
+                        <div class="contact-option">
+                          <input
+                            type="checkbox"
+                            id="contact-call"
+                            class="contact-checkbox"
+                          />
+                          <label for="contact-call" class="contact-label">
+                            <i class="fas fa-phone me-2"></i>
+                            Call
+                          </label>
+                        </div>
+
+                        <div class="contact-option">
+                          <input
+                            type="checkbox"
+                            id="contact-whatsapp"
+                            class="contact-checkbox"
+                            checked
+                          />
+                          <label
+                            for="contact-whatsapp"
+                            class="contact-label whatsapp"
+                          >
+                            <i class="fab fa-whatsapp me-2"></i>
+                            Whatsapp
+                          </label>
+                        </div>
+
+                        <div class="contact-option">
+                          <input
+                            type="checkbox"
+                            id="contact-email"
+                            class="contact-checkbox"
+                            checked
+                          />
+                          <label
+                            for="contact-email"
+                            class="contact-label email"
+                          >
+                            <i class="fas fa-envelope me-2"></i>
+                            Email
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="text-center mt-4">
+                    <button
+                      type="button"
+                      class="btn btn-outline-secondary me-3"
+                      onclick="prevStep()"
+                    >
+                      Previous
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-primary next-btn"
+                      onclick="nextStep()"
+                    >
+                      Next
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Step 5: Review & Submit -->
+              <div class="step-content" id="step-5">
+                <div class="form-section">
+                  <!-- Review Content -->
+                  <div class="review-content-new">
+                    <!-- Title and Submit Button -->
+                    <div class="review-title-new">
+                      <h3>Review & Submit!</h3>
+                      <p>
+                        Please check all details before submitting. Submit when
+                        you are ready to go live!
+                      </p>
+                      <button
+                        type="button"
+                        class="btn btn-primary submit-btn-new"
+                        onclick="return submitListing(event);"
+                      >
+                        Submit
+                      </button>
+                    </div>
+
+                    <!-- Car Details Section -->
+                    <div class="review-section-new">
+                      <div class="section-header-new">
+                        <h4>Car Details</h4>
+                        <button
+                          class="btn btn-outline-success edit-btn-new"
+                          onclick="goToStep(1)"
+                        >
+                          Edit
+                        </button>
+                      </div>
+
+                      <div class="details-row">
+                        <div class="detail-group">
+                          <label>Make</label>
+                          <div class="detail-box" id="review-make">Audi</div>
+                        </div>
+                        <div class="detail-group">
+                          <label>Model</label>
+                          <div class="detail-box" id="review-model">A4 GT</div>
+                        </div>
+                        <div class="detail-group">
+                          <label>Service</label>
+                          <div class="detail-box" id="review-service">
+                            Feature Rich
+                          </div>
+                        </div>
+                        <div class="detail-group">
+                          <label>Year/Manufacture</label>
+                          <div class="detail-box" id="review-year">2020</div>
+                        </div>
+                      </div>
+
+                      <div class="details-row">
+                        <div class="detail-group">
+                          <label>Mileage</label>
+                          <div class="detail-box" id="review-mileage">
+                            25,000 Km
+                          </div>
+                        </div>
+                        <div class="detail-group">
+                          <label>Fuel Type</label>
+                          <div class="detail-box" id="review-fuel">Petrol</div>
+                        </div>
+                        <div class="detail-group">
+                          <label>Transmission</label>
+                          <div class="detail-box" id="review-transmission">
+                            Automatic
+                          </div>
+                        </div>
+                        <div class="detail-group">
+                          <label>Ownership</label>
+                          <div class="detail-box" id="review-ownership">
+                            1st Owner
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Features & Specifications Section -->
+                    <div class="review-section-new">
+                      <div class="section-header-new">
+                        <h4>Features & Specifications</h4>
+                        <button
+                          class="btn btn-outline-success edit-btn-new"
+                          onclick="goToStep(2)"
+                        >
+                          Edit
+                        </button>
+                      </div>
+
+                      <div class="features-row">
+                        <div class="feature-category-new">
+                          <h5>Comfort & Convenience</h5>
+                          <div class="feature-pills">
+                            <span class="feature-pill">Air Conditioning</span>
+                            <span class="feature-pill">Power Windows</span>
+                            <span class="feature-pill">ABS</span>
+                          </div>
+                        </div>
+
+                        <div class="feature-category-new">
+                          <h5>Safety</h5>
+                          <div class="feature-pills">
+                            <span class="feature-pill">ABS</span>
+                            <span class="feature-pill">Airbags</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="features-row">
+                        <div class="feature-category-new">
+                          <h5>Technology & Entertainment</h5>
+                          <div class="feature-pills">
+                            <span class="feature-pill"
+                              >Touchscreen Display</span
+                            >
+                            <span class="feature-pill"
+                              >Bluetooth Connectivity</span
+                            >
+                            <span class="feature-pill">Touchscreen Audio</span>
+                          </div>
+                        </div>
+
+                        <div class="feature-category-new">
+                          <h5>Performance</h5>
+                          <div class="feature-pills">
+                            <span class="feature-pill">ABS / EBD</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Photos Section -->
+                    <div class="review-section-new">
+                      <div class="section-header-new">
+                        <h4>Photos</h4>
+                        <button
+                          class="btn btn-outline-success edit-btn-new"
+                          onclick="goToStep(3)"
+                        >
+                          Edit
+                        </button>
+                      </div>
+
+                      <div class="photos-grid-new">
+                        <div class="photo-item large">
+                          <img
+                            src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=400&h=250&fit=crop&crop=center"
+                            alt="Main Photo"
+                          />
+                        </div>
+                        <div class="photo-item">
+                          <img
+                            src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=200&h=150&fit=crop&crop=left"
+                            alt="Photo 2"
+                          />
+                        </div>
+                        <div class="photo-item">
+                          <img
+                            src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=200&h=150&fit=crop&crop=right"
+                            alt="Photo 3"
+                          />
+                        </div>
+                        <div class="photo-item">
+                          <img
+                            src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=200&h=150&fit=crop&crop=top"
+                            alt="Photo 4"
+                          />
+                        </div>
+                        <div class="photo-item">
+                          <img
+                            src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=200&h=150&fit=crop&crop=bottom"
+                            alt="Photo 5"
+                          />
+                        </div>
+                        <div class="photo-item">
+                          <img
+                            src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=200&h=150&fit=crop&crop=entropy"
+                            alt="Photo 6"
+                          />
+                        </div>
+                        <div class="photo-item">
+                          <img
+                            src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=200&h=150&fit=crop&crop=faces"
+                            alt="Photo 7"
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Seller Contact Details Section -->
+                    <div class="review-section-new">
+                      <div class="section-header-new">
+                        <h4>Seller Contact Details</h4>
+                        <button
+                          class="btn btn-outline-success edit-btn-new"
+                          onclick="goToStep(4)"
+                        >
+                          Edit
+                        </button>
+                      </div>
+
+                      <div class="contact-row">
+                        <div class="contact-group">
+                          <label>Seller Name</label>
+                          <div class="contact-box" id="review-seller-name">
+                            Omar Al Mansoori
+                          </div>
+                        </div>
+                        <div class="contact-group">
+                          <label>Seller Phone Number</label>
+                          <div class="contact-box" id="review-seller-phone">
+                            +971 55 789 2345
+                          </div>
+                        </div>
+                        <div class="contact-group">
+                          <label>Seller Email Address</label>
+                          <div class="contact-box" id="review-seller-email">
+                            Omaral321@gmail.com
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="contact-row">
+                        <div class="contact-group">
+                          <label>Contact Method</label>
+                          <div class="contact-method-pills">
+                            <span class="method-pill">WhatsApp</span>
+                            <span class="method-pill">Email</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="text-center mt-4">
+                    <button
+                      type="button"
+                      class="btn btn-outline-secondary me-3"
+                      onclick="prevStep()"
+                    >
+                      Previous
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Success Modal -->
+              <div
+                class="success-modal"
+                id="success-modal"
+                style="display: none"
+              >
+                <div class="success-modal-content">
+                  <div class="success-illustration">
+                    <!-- Car Deal Illustration SVG -->
+                    <svg
+                      width="300"
+                      height="200"
+                      viewBox="0 0 300 200"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <!-- Car -->
+                      <ellipse
+                        cx="150"
+                        cy="170"
+                        rx="80"
+                        ry="8"
+                        fill="#333"
+                        opacity="0.2"
+                      />
+                      <rect
+                        x="80"
+                        y="130"
+                        width="140"
+                        height="30"
+                        rx="15"
+                        fill="#FF6B35"
+                      />
+                      <rect
+                        x="90"
+                        y="115"
+                        width="120"
+                        height="20"
+                        rx="10"
+                        fill="#FF8C42"
+                      />
+                      <!-- Windshield -->
+                      <rect
+                        x="100"
+                        y="120"
+                        width="100"
+                        height="15"
+                        rx="8"
+                        fill="#87CEEB"
+                        opacity="0.7"
+                      />
+                      <!-- Wheels -->
+                      <circle cx="110" cy="155" r="15" fill="#333" />
+                      <circle cx="110" cy="155" r="8" fill="#666" />
+                      <circle cx="190" cy="155" r="15" fill="#333" />
+                      <circle cx="190" cy="155" r="8" fill="#666" />
+                      <!-- Headlights -->
+                      <rect
+                        x="85"
+                        y="135"
+                        width="8"
+                        height="6"
+                        rx="3"
+                        fill="#FFE4B5"
+                      />
+                      <rect
+                        x="207"
+                        y="135"
+                        width="8"
+                        height="6"
+                        rx="3"
+                        fill="#FFE4B5"
+                      />
+
+                      <!-- Person 1 (Left - Red shirt) -->
+                      <circle cx="120" cy="90" r="12" fill="#FDBCB4" />
+                      <rect
+                        x="110"
+                        y="100"
+                        width="20"
+                        height="25"
+                        rx="10"
+                        fill="#DC143C"
+                      />
+                      <rect
+                        x="115"
+                        y="125"
+                        width="4"
+                        height="15"
+                        fill="#FDBCB4"
+                      />
+                      <rect
+                        x="121"
+                        y="125"
+                        width="4"
+                        height="15"
+                        fill="#FDBCB4"
+                      />
+                      <rect
+                        x="113"
+                        y="140"
+                        width="8"
+                        height="4"
+                        rx="2"
+                        fill="#333"
+                      />
+                      <rect
+                        x="119"
+                        y="140"
+                        width="8"
+                        height="4"
+                        rx="2"
+                        fill="#333"
+                      />
+                      <!-- Hair -->
+                      <path
+                        d="M108 85 Q120 75 132 85 Q130 78 120 78 Q110 78 108 85"
+                        fill="#8B4513"
+                      />
+
+                      <!-- Person 2 (Right - Blue shirt) -->
+                      <circle cx="180" cy="90" r="12" fill="#FDBCB4" />
+                      <rect
+                        x="170"
+                        y="100"
+                        width="20"
+                        height="25"
+                        rx="10"
+                        fill="#1E90FF"
+                      />
+                      <rect
+                        x="175"
+                        y="125"
+                        width="4"
+                        height="15"
+                        fill="#FDBCB4"
+                      />
+                      <rect
+                        x="181"
+                        y="125"
+                        width="4"
+                        height="15"
+                        fill="#FDBCB4"
+                      />
+                      <rect
+                        x="173"
+                        y="140"
+                        width="8"
+                        height="4"
+                        rx="2"
+                        fill="#333"
+                      />
+                      <rect
+                        x="179"
+                        y="140"
+                        width="8"
+                        height="4"
+                        rx="2"
+                        fill="#333"
+                      />
+                      <!-- Hair -->
+                      <path
+                        d="M168 85 Q180 75 192 85 Q190 78 180 78 Q170 78 168 85"
+                        fill="#2F4F4F"
+                      />
+
+                      <!-- Handshake -->
+                      <rect
+                        x="135"
+                        y="108"
+                        width="30"
+                        height="8"
+                        rx="4"
+                        fill="#FDBCB4"
+                      />
+                      <circle cx="140" cy="112" r="4" fill="#FDBCB4" />
+                      <circle cx="160" cy="112" r="4" fill="#FDBCB4" />
+
+                      <!-- Keys -->
+                      <rect
+                        x="145"
+                        y="95"
+                        width="10"
+                        height="3"
+                        rx="1.5"
+                        fill="#FFD700"
+                      />
+                      <circle cx="148" cy="92" r="2" fill="#FFD700" />
+                      <rect
+                        x="147"
+                        y="90"
+                        width="2"
+                        height="4"
+                        fill="#FFD700"
+                      />
+                    </svg>
+                  </div>
+
+                  <h2>Your car listing is live!</h2>
+                  <p class="success-subtitle">
+                    Buyers can now view and contact you.
+                  </p>
+                  <p class="success-description">
+                    You can manage your listing anytime from your profile
+                  </p>
+
+                  <div class="success-actions">
+                    <button
+                      class="btn btn-outline-success btn-lg"
+                      onclick="viewListing()"
+                    >
+                      View my Listing
+                    </button>
+                    <button
+                      class="btn btn-primary btn-lg"
+                      onclick="boostListing()"
+                    >
+                      Boost
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Mobile Menu Offcanvas -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title">Menu</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <!-- Navigation Links -->
+        <ul class="list-unstyled">
+          <li class="mb-2">
+            <a
+              href="../used-cars/used-cars.html"
+              class="text-decoration-none d-block py-3 px-2 rounded text-dark fw-medium"
+              >Used cars</a
+            >
+          </li>
+          <li class="mb-2">
+            <a
+              href="#"
+              class="text-decoration-none d-block py-3 px-2 rounded text-dark fw-medium"
+              >New Cars</a
+            >
+          </li>
+          <li class="mb-2">
+            <a
+              href="../value-my-car/value-my-car.html"
+              class="text-decoration-none d-block py-3 px-2 rounded text-dark fw-medium"
+              >Value my car</a
+            >
+          </li>
+        </ul>
+
+        <hr />
+
+        <!-- Auth Links -->
+        <ul class="list-unstyled">
+          <li class="mb-2">
+            <a
+              href="../login/login.html"
+              class="text-decoration-none d-block py-3 px-2 rounded text-dark fw-medium"
+              >Login</a
+            >
+          </li>
+          <li class="mb-2">
+            <a
+              href="../signup/signup.html"
+              class="text-decoration-none d-block py-3 px-2 rounded text-dark fw-medium"
+              >Sign Up</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5 mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 mb-4">
+            <h5 class="fw-bold mb-3">7 States</h5>
+            <p class="text-light">
+              Your trusted partner for buying and selling cars in the UAE.
+            </p>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4">
+            <h6 class="fw-bold mb-3">Quick Links</h6>
+            <ul class="list-unstyled">
+              <li>
+                <a
+                  href="../used-cars/used-cars.html"
+                  class="text-light text-decoration-none"
+                  >Used Cars</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none">New Cars</a>
+              </li>
+              <li>
+                <a
+                  href="../value-my-car/value-my-car.html"
+                  class="text-light text-decoration-none"
+                  >Value My Car</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../sell-my-car/sell-my-car.html"
+                  class="text-light text-decoration-none"
+                  >Sell My Car</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4">
+            <h6 class="fw-bold mb-3">Support</h6>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#" class="text-light text-decoration-none"
+                  >Contact Us</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none">FAQ</a>
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none"
+                  >Terms & Conditions</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none"
+                  >Privacy Policy</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4">
+            <h6 class="fw-bold mb-3">Contact Info</h6>
+            <p class="text-light mb-2">
+              <i class="fas fa-phone me-2"></i>+971 50 123 4567
+            </p>
+            <p class="text-light mb-2">
+              <i class="fas fa-envelope me-2"></i>info@7states.ae
+            </p>
+            <p class="text-light">
+              <i class="fas fa-map-marker-alt me-2"></i>Dubai, UAE
+            </p>
+          </div>
+        </div>
+        <hr class="my-4" />
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <p class="mb-0 text-light">© 2024 7 States. All rights reserved.</p>
+          </div>
+          <div class="col-md-6 text-md-end">
+            <div class="social-links">
+              <a href="#" class="text-light me-3"
+                ><i class="fab fa-facebook"></i
+              ></a>
+              <a href="#" class="text-light me-3"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" class="text-light me-3"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" class="text-light"><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="../script.js"></script>
+    <script src="post-car-ad.js"></script>
+  </body>
+</html>
