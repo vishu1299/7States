@@ -160,7 +160,6 @@ function initializeCarousels() {
     console.error("Error initializing carousels:", error);
   }
 }
-
 // Update thumbnail active state
 function updateThumbnailActive(activeIndex) {
   const thumbnails = document.querySelectorAll(".thumbnail-image");

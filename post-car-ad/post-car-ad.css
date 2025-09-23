@@ -138,14 +138,22 @@
 .form-content {
   background: white;
   padding: 40px;
+  width: 100%;
+  max-width: 100%;
+  overflow: visible;
 }
 
 .step-content {
   display: none;
+  width: 100%;
+  max-width: 100%;
+  overflow: visible;
 }
 
 .step-content.active {
   display: block;
+  width: 100%;
+  max-width: 100%;
 }
 
 .form-section {
@@ -462,7 +470,7 @@
   }
 
   .features-modern-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 30px;
   }
 
@@ -1637,4 +1645,32 @@
     padding: 10px 15px;
     font-size: 14px;
   }
+}
+
+.step-content {
+  display: none;
+  width: 100%;
+  max-width: 100%;
+  overflow: visible;
+}
+
+.step-content.active {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+
+.form-content {
+  background: white;
+  padding: 40px;
+  width: 100%;
+  max-width: 100%;
+  overflow: visible;
+}
+
+.dashboard-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: transparent;
+  padding: 0;
 }
