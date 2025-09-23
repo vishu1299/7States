@@ -1,0 +1,640 @@
+/* My Leads Page Styles */
+
+/* Sidebar Styles */
+.sidebar-container {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.sidebar-menu {
+  padding: 0;
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid #f0f0f0;
+  color: #666;
+  font-weight: 500;
+}
+
+.sidebar-item:last-child {
+  border-bottom: none;
+}
+
+.sidebar-item:hover {
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+.sidebar-item.active {
+  background-color: #fff5f5;
+  color: #dc3545;
+  border-left: 4px solid #dc3545;
+}
+
+.sidebar-item i {
+  width: 20px;
+  font-size: 16px;
+}
+
+.sidebar-item.active i {
+  color: #dc3545;
+}
+
+/* Main Content Styles */
+.main-content {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  min-height: 600px;
+}
+
+.page-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 15px;
+}
+
+/* Lead Card Styles */
+.lead-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+  border: 1px solid #f0f0f0;
+}
+
+.lead-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.lead-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.lead-profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.profile-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #f0f0f0;
+}
+
+.profile-info h5 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.profile-info .phone-number {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+.call-btn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.call-btn:hover {
+  background-color: #c82333;
+  transform: translateY(-1px);
+}
+
+.call-btn i {
+  font-size: 12px;
+}
+
+.lead-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.detail-label {
+  font-size: 12px;
+  color: #999;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.detail-value {
+  font-size: 14px;
+  color: #333;
+  font-weight: 500;
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  color: #666;
+}
+
+.empty-state i {
+  font-size: 48px;
+  color: #ddd;
+  margin-bottom: 20px;
+}
+
+.empty-state h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.empty-state p {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.empty-state .btn {
+  padding: 10px 24px;
+  border-radius: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-content {
+    padding: 20px;
+  }
+
+  .page-title {
+    font-size: 24px;
+  }
+
+  .sidebar-container {
+    margin-bottom: 20px;
+  }
+
+  .sidebar-menu {
+    display: flex;
+    overflow-x: auto;
+    padding: 0;
+  }
+
+  .sidebar-item {
+    white-space: nowrap;
+    min-width: 120px;
+    justify-content: center;
+    flex-direction: column;
+    gap: 6px;
+    padding: 12px 16px;
+    text-align: center;
+  }
+
+  .sidebar-item span {
+    font-size: 12px;
+  }
+
+  .lead-card {
+    padding: 16px;
+  }
+
+  .lead-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .lead-details {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .profile-avatar {
+    width: 45px;
+    height: 45px;
+  }
+
+  .profile-info h5 {
+    font-size: 15px;
+  }
+
+  .profile-info .phone-number {
+    font-size: 13px;
+  }
+
+  .call-btn {
+    padding: 6px 12px;
+    font-size: 13px;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .main-content {
+    padding: 15px;
+  }
+
+  .lead-card {
+    padding: 12px;
+  }
+
+  .lead-details {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .profile-avatar {
+    width: 40px;
+    height: 40px;
+  }
+
+  .profile-info h5 {
+    font-size: 14px;
+  }
+
+  .profile-info .phone-number {
+    font-size: 12px;
+  }
+
+  .call-btn {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+
+  .detail-label {
+    font-size: 11px;
+  }
+
+  .detail-value {
+    font-size: 13px;
+  }
+}
+
+/* Mega Dropdown Styles */
+.mega-dropdown {
+  min-width: 800px;
+  max-width: 900px;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  padding: 1.5rem;
+}
+
+.mega-dropdown .dropdown-header {
+  color: #1f2937;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  padding: 0;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 0.5rem;
+}
+
+.mega-dropdown .dropdown-item {
+  color: #6b7280;
+  font-size: 13px;
+  padding: 0.4rem 0;
+  border: none;
+  background: none;
+  transition: all 0.2s ease;
+}
+
+.mega-dropdown .dropdown-item:hover {
+  color: #2563eb;
+  background-color: transparent;
+  padding-left: 0.5rem;
+}
+
+/* Enhanced Responsive Design */
+
+/* Large screens (1200px and up) */
+@media (min-width: 1200px) {
+  .main-content {
+    padding: 40px;
+  }
+
+  .page-title {
+    font-size: 32px;
+    margin-bottom: 40px;
+  }
+
+  .lead-card {
+    padding: 25px;
+    margin-bottom: 25px;
+  }
+
+  .profile-avatar {
+    width: 55px;
+    height: 55px;
+  }
+
+  .profile-info h5 {
+    font-size: 18px;
+  }
+
+  .profile-info .phone-number {
+    font-size: 15px;
+  }
+
+  .call-btn {
+    padding: 10px 20px;
+    font-size: 15px;
+  }
+
+  .detail-value {
+    font-size: 15px;
+  }
+
+  .mega-dropdown {
+    min-width: 900px;
+    max-width: 1000px;
+  }
+}
+
+/* Medium screens (992px to 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .main-content {
+    padding: 35px;
+  }
+
+  .page-title {
+    font-size: 30px;
+    margin-bottom: 35px;
+  }
+
+  .lead-card {
+    padding: 22px;
+    margin-bottom: 22px;
+  }
+
+  .profile-avatar {
+    width: 52px;
+    height: 52px;
+  }
+
+  .profile-info h5 {
+    font-size: 17px;
+  }
+
+  .call-btn {
+    padding: 9px 18px;
+    font-size: 14px;
+  }
+
+  .mega-dropdown {
+    min-width: 800px;
+    max-width: 900px;
+  }
+}
+
+/* Tablet screens (768px to 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .sidebar-container {
+    margin-bottom: 25px;
+  }
+
+  .main-content {
+    padding: 25px;
+  }
+
+  .page-title {
+    font-size: 26px;
+    margin-bottom: 25px;
+  }
+
+  .lead-card {
+    padding: 18px;
+    margin-bottom: 18px;
+  }
+
+  .profile-avatar {
+    width: 48px;
+    height: 48px;
+  }
+
+  .lead-details {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .mega-dropdown {
+    min-width: 600px;
+    max-width: 700px;
+  }
+}
+
+/* Small mobile screens (up to 575px) */
+@media (max-width: 575px) {
+  .container-fluid {
+    padding: 0 15px;
+  }
+
+  .main-content {
+    padding: 15px;
+    margin: 0 5px;
+  }
+
+  .page-title {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  .lead-card {
+    padding: 12px;
+    margin-bottom: 15px;
+  }
+
+  .lead-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .lead-profile {
+    gap: 10px;
+  }
+
+  .profile-avatar {
+    width: 40px;
+    height: 40px;
+  }
+
+  .profile-info h5 {
+    font-size: 14px;
+  }
+
+  .profile-info .phone-number {
+    font-size: 12px;
+  }
+
+  .call-btn {
+    padding: 6px 10px;
+    font-size: 12px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .lead-details {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin-top: 12px;
+    padding-top: 12px;
+  }
+
+  .detail-label {
+    font-size: 10px;
+  }
+
+  .detail-value {
+    font-size: 12px;
+  }
+
+  .sidebar-item {
+    min-width: 100px;
+    padding: 10px 12px;
+  }
+
+  .sidebar-item span {
+    font-size: 11px;
+  }
+
+  .sidebar-item i {
+    font-size: 14px;
+  }
+
+  .mega-dropdown {
+    min-width: 300px;
+    max-width: 350px;
+    padding: 1rem;
+  }
+}
+
+/* Extra small screens (up to 400px) */
+@media (max-width: 400px) {
+  .main-content {
+    padding: 12px;
+    margin: 0 3px;
+  }
+
+  .page-title {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .lead-card {
+    padding: 10px;
+    margin-bottom: 12px;
+  }
+
+  .lead-profile {
+    gap: 8px;
+  }
+
+  .profile-avatar {
+    width: 35px;
+    height: 35px;
+  }
+
+  .profile-info h5 {
+    font-size: 13px;
+  }
+
+  .profile-info .phone-number {
+    font-size: 11px;
+  }
+
+  .call-btn {
+    padding: 5px 8px;
+    font-size: 11px;
+  }
+
+  .lead-details {
+    gap: 6px;
+    margin-top: 10px;
+    padding-top: 10px;
+  }
+
+  .detail-label {
+    font-size: 9px;
+  }
+
+  .detail-value {
+    font-size: 11px;
+  }
+
+  .sidebar-item {
+    min-width: 90px;
+    padding: 8px 10px;
+  }
+
+  .sidebar-item span {
+    font-size: 10px;
+  }
+
+  .sidebar-item i {
+    font-size: 12px;
+  }
+
+  .mega-dropdown {
+    min-width: 280px;
+    max-width: 320px;
+    padding: 0.8rem;
+  }
+
+  .empty-state {
+    padding: 40px 15px;
+  }
+
+  .empty-state i {
+    font-size: 36px;
+    margin-bottom: 15px;
+  }
+
+  .empty-state h4 {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+
+  .empty-state p {
+    font-size: 12px;
+    margin-bottom: 15px;
+  }
+}

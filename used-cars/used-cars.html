@@ -332,43 +332,124 @@
           <div class="d-flex align-items-center gap-3">
             <!-- Desktop Auth Links -->
             <div class="d-none d-lg-flex align-items-center gap-3">
-              <a
-                href="../login/login.html"
-                class="text-decoration-none text-dark fw-medium d-flex align-items-center gap-1"
+              <!-- Not Logged In State -->
+              <div
+                id="desktop-auth-not-logged-in"
+                class="d-flex align-items-center gap-3"
               >
-                Login
-                <svg
-                  width="12"
-                  height="12"
-                  fill="currentColor"
-                  class="bi bi-arrow-up-right"
-                  viewBox="0 0 16 16"
+                <a
+                  href="../my-ads/my-ads.html"
+                  class="text-decoration-none text-dark fw-medium d-flex align-items-center gap-1"
                 >
-                  <path
-                    fill-rule="evenodd"
-                    d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"
-                  />
-                </svg>
-              </a>
-              <a
-                href="../signup/signup.html"
-                class="text-decoration-none text-dark fw-medium d-flex align-items-center gap-1"
+                  <svg
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-grid-3x3-gap"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M4 2v2H2V2h2zm1 12v-2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1zm0-5V7a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1zm0-5V2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1zm5 10v-2a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1zm0-5V7a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1zm0-5V2a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1zm5 10v-2a1 1 0 0 0-1-1h-2a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1zm0-5V7a1 1 0 0 0-1-1h-2a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1zm0-5V2a1 1 0 0 0-1-1h-2a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1z"
+                    />
+                  </svg>
+                  My Ads
+                </a>
+                <a
+                  href="../login/login.html"
+                  class="text-decoration-none text-dark fw-medium d-flex align-items-center gap-1"
+                >
+                  Login
+                  <svg
+                    width="12"
+                    height="12"
+                    fill="currentColor"
+                    class="bi bi-arrow-up-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"
+                    />
+                  </svg>
+                </a>
+                <a
+                  href="../signup/signup.html"
+                  class="text-decoration-none text-dark fw-medium d-flex align-items-center gap-1"
+                >
+                  Sign Up
+                  <svg
+                    width="12"
+                    height="12"
+                    fill="currentColor"
+                    class="bi bi-arrow-up-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"
+                    />
+                  </svg>
+                </a>
+              </div>
+
+              <!-- Logged In State -->
+              <div
+                id="desktop-auth-logged-in"
+                class="d-flex align-items-center gap-3"
+                style="display: none"
               >
-                Sign Up
-                <svg
-                  width="12"
-                  height="12"
-                  fill="currentColor"
-                  class="bi bi-arrow-up-right"
-                  viewBox="0 0 16 16"
+                <a
+                  href="#"
+                  class="text-decoration-none text-dark fw-medium d-flex align-items-center gap-2"
+                  id="desktop-my-ads-btn"
                 >
-                  <path
-                    fill-rule="evenodd"
-                    d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"
-                  />
-                </svg>
-              </a>
+                  <svg
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-grid-3x3-gap"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M4 2v2H2V2h2zm1 12v-2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1zm0-5V7a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1zm0-5V2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1zm5 10v-2a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1zm0-5V7a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1zm0-5V2a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1zm5 10v-2a1 1 0 0 0-1-1h-2a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1zm0-5V7a1 1 0 0 0-1-1h-2a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1zm0-5V2a1 1 0 0 0-1-1h-2a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1z"
+                    />
+                  </svg>
+                  My Ads
+                </a>
+                <a
+                  href="#"
+                  class="text-decoration-none text-dark fw-medium d-flex align-items-center gap-2"
+                  id="desktop-logout-btn"
+                >
+                  <svg
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-box-arrow-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"
+                    />
+                  </svg>
+                  Logout
+                </a>
+              </div>
             </div>
+
+            <!-- Test Login Button (temporary) -->
+            <button
+              class="btn btn-success me-2"
+              onclick="simulateLogin()"
+              id="test-login-btn"
+            >
+              Test Login
+            </button>
 
             <!-- Sell My Car Button -->
             <button
@@ -500,7 +581,27 @@
         <hr class="my-4" />
 
         <!-- Auth Links -->
-        <ul class="list-unstyled">
+        <!-- Not Logged In State -->
+        <ul class="list-unstyled" id="mobile-auth-not-logged-in">
+          <li class="mb-2">
+            <a
+              href="../my-ads/my-ads.html"
+              class="text-decoration-none d-block py-3 px-2 rounded text-dark fw-medium d-flex align-items-center justify-content-between"
+            >
+              My Ads
+              <svg
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-grid-3x3-gap"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M4 2v2H2V2h2zm1 12v-2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1zm0-5V7a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1zm0-5V2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1zm5 10v-2a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1zm0-5V7a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1zm0-5V2a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1zm5 10v-2a1 1 0 0 0-1-1h-2a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1zm0-5V7a1 1 0 0 0-1-1h-2a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1zm0-5V2a1 1 0 0 0-1-1h-2a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1z"
+                />
+              </svg>
+            </a>
+          </li>
           <li class="mb-2">
             <a
               href="../login/login.html"
@@ -542,6 +643,78 @@
             </a>
           </li>
         </ul>
+
+        <!-- Logged In State -->
+        <div id="mobile-auth-logged-in" style="display: none">
+          <div
+            class="d-flex align-items-center gap-3 mb-3 p-3 bg-light rounded"
+          >
+            <svg
+              width="24"
+              height="24"
+              fill="currentColor"
+              class="bi bi-person-circle"
+              viewBox="0 0 16 16"
+            >
+              <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+              <path
+                fill-rule="evenodd"
+                d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"
+              />
+            </svg>
+            <div>
+              <div class="fw-medium" id="mobile-username">User</div>
+              <small class="text-muted">Welcome back!</small>
+            </div>
+          </div>
+          <ul class="list-unstyled">
+            <li class="mb-2">
+              <a
+                href="#"
+                id="mobile-my-ads-btn"
+                class="text-decoration-none d-block py-3 px-2 rounded text-dark fw-medium d-flex align-items-center justify-content-between"
+              >
+                My Ads
+                <svg
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-grid-3x3-gap"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M4 2v2H2V2h2zm1 12v-2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1zm0-5V7a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1zm0-5V2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1zm5 10v-2a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1zm0-5V7a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1zm0-5V2a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1zm5 10v-2a1 1 0 0 0-1-1h-2a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1zm0-5V7a1 1 0 0 0-1-1h-2a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1zm0-5V2a1 1 0 0 0-1-1h-2a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1z"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li class="mb-2">
+              <a
+                href="#"
+                id="mobile-logout-btn"
+                class="text-decoration-none d-block py-3 px-2 rounded text-danger fw-medium d-flex align-items-center justify-content-between"
+              >
+                Logout
+                <svg
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-box-arrow-right"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z"
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"
+                  />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
 
@@ -963,360 +1136,10 @@
 
         <!-- Car Listings -->
         <div class="col-lg-9 col-md-8">
-          <!-- Results Header -->
-          <div class="d-flex justify-content-between align-items-center mb-4">
-            <h4 class="mb-0 fw-bold" id="resultsCount">5,640 Used cars</h4>
-            <div class="d-flex align-items-center gap-3">
-              <button
-                class="btn btn-outline-secondary btn-sm view-toggle active"
-                data-view="grid"
-              >
-                <i class="fas fa-th"></i> View
-              </button>
-              <button
-                class="btn btn-outline-secondary btn-sm view-toggle"
-                data-view="list"
-              >
-                <i class="fas fa-list"></i>
-              </button>
+          <div class="container-custom">
+            <div class="row g-4" id="car-listings">
+              <!-- Car cards will be dynamically generated here -->
             </div>
-          </div>
-
-          <!-- Car Grid -->
-          <div class="car-grid" id="carGrid">
-            <!-- Car Card 1 -->
-            <div
-              class="car-card bg-white rounded-3 shadow-sm overflow-hidden"
-              onclick="openCarDetails(1, 'Audi Q3 Sportback', '94,900')"
-              style="cursor: pointer"
-            >
-              <div class="car-image-container position-relative">
-                <img
-                  src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=400&h=250&fit=crop"
-                  alt="Audi Q3 Sportback"
-                  class="car-image"
-                />
-                <button
-                  class="btn btn-sm btn-light favorite-btn position-absolute"
-                  onclick="event.stopPropagation();"
-                >
-                  <i class="far fa-heart"></i>
-                </button>
-              </div>
-              <div class="car-details p-3">
-                <h6 class="car-title mb-2">Audi Q3 Sportback</h6>
-                <p class="car-price mb-2 fw-bold text-primary">AED 94,900</p>
-                <div
-                  class="car-specs d-flex justify-content-between text-muted small"
-                >
-                  <span><i class="fas fa-calendar me-1"></i> 2024</span>
-                  <span><i class="fas fa-tachometer-alt me-1"></i> 0 km</span>
-                  <span><i class="fas fa-map-marker-alt me-1"></i> Dubai</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Car Card 2 -->
-            <div
-              class="car-card bg-white rounded-3 shadow-sm overflow-hidden"
-              onclick="openCarDetails(2, 'Audi A4 Premium Plus 2024', '111,400')"
-              style="cursor: pointer"
-            >
-              <div class="car-image-container position-relative">
-                <img
-                  src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=400&h=250&fit=crop"
-                  alt="Audi A4 Premium Plus"
-                  class="car-image"
-                />
-                <button
-                  class="btn btn-sm btn-light favorite-btn position-absolute"
-                  onclick="event.stopPropagation();"
-                >
-                  <i class="far fa-heart"></i>
-                </button>
-              </div>
-              <div class="car-details p-3">
-                <h6 class="car-title mb-2">Audi A4 Premium Plus 2024</h6>
-                <p class="car-price mb-2 fw-bold text-primary">AED 111,400</p>
-                <div
-                  class="car-specs d-flex justify-content-between text-muted small"
-                >
-                  <span><i class="fas fa-calendar me-1"></i> 2024</span>
-                  <span><i class="fas fa-tachometer-alt me-1"></i> 0 km</span>
-                  <span><i class="fas fa-map-marker-alt me-1"></i> Dubai</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Car Card 3 -->
-            <div
-              class="car-card bg-white rounded-3 shadow-sm overflow-hidden"
-              onclick="openCarDetails(3, 'Audi Q3 Sportback', '150,800')"
-              style="cursor: pointer"
-            >
-              <div class="car-image-container position-relative">
-                <img
-                  src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=400&h=250&fit=crop"
-                  alt="Audi Q3 Sportback"
-                  class="car-image"
-                />
-                <button
-                  class="btn btn-sm btn-light favorite-btn position-absolute"
-                  onclick="event.stopPropagation();"
-                >
-                  <i class="far fa-heart"></i>
-                </button>
-              </div>
-              <div class="car-details p-3">
-                <h6 class="car-title mb-2">Audi Q3 Sportback</h6>
-                <p class="car-price mb-2 fw-bold text-primary">AED 150,800</p>
-                <div
-                  class="car-specs d-flex justify-content-between text-muted small"
-                >
-                  <span><i class="fas fa-calendar me-1"></i> 2024</span>
-                  <span><i class="fas fa-tachometer-alt me-1"></i> 0 km</span>
-                  <span><i class="fas fa-map-marker-alt me-1"></i> Dubai</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Car Card 4 -->
-            <div
-              class="car-card bg-white rounded-3 shadow-sm overflow-hidden"
-              onclick="openCarDetails(4, 'BMW X5 M Sport', '185,000')"
-              style="cursor: pointer"
-            >
-              <div class="car-image-container position-relative">
-                <img
-                  src="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=400&h=250&fit=crop"
-                  alt="BMW X5 M Sport"
-                  class="car-image"
-                />
-                <button
-                  class="btn btn-sm btn-light favorite-btn position-absolute"
-                  onclick="event.stopPropagation();"
-                >
-                  <i class="far fa-heart"></i>
-                </button>
-              </div>
-              <div class="car-details p-3">
-                <h6 class="car-title mb-2">BMW X5 M Sport</h6>
-                <p class="car-price mb-2 fw-bold text-primary">AED 185,000</p>
-                <div
-                  class="car-specs d-flex justify-content-between text-muted small"
-                >
-                  <span><i class="fas fa-calendar me-1"></i> 2023</span>
-                  <span
-                    ><i class="fas fa-tachometer-alt me-1"></i> 15,000 km</span
-                  >
-                  <span
-                    ><i class="fas fa-map-marker-alt me-1"></i> Abu Dhabi</span
-                  >
-                </div>
-              </div>
-            </div>
-
-            <!-- Car Card 5 -->
-            <div
-              class="car-card bg-white rounded-3 shadow-sm overflow-hidden"
-              onclick="openCarDetails(5, 'Mercedes-Benz C-Class', '125,000')"
-              style="cursor: pointer"
-            >
-              <div class="car-image-container position-relative">
-                <img
-                  src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=400&h=250&fit=crop"
-                  alt="Mercedes-Benz C-Class"
-                  class="car-image"
-                />
-                <button
-                  class="btn btn-sm btn-light favorite-btn position-absolute"
-                  onclick="event.stopPropagation();"
-                >
-                  <i class="far fa-heart"></i>
-                </button>
-              </div>
-              <div class="car-details p-3">
-                <h6 class="car-title mb-2">Mercedes-Benz C-Class</h6>
-                <p class="car-price mb-2 fw-bold text-primary">AED 125,000</p>
-                <div
-                  class="car-specs d-flex justify-content-between text-muted small"
-                >
-                  <span><i class="fas fa-calendar me-1"></i> 2023</span>
-                  <span
-                    ><i class="fas fa-tachometer-alt me-1"></i> 8,000 km</span
-                  >
-                  <span
-                    ><i class="fas fa-map-marker-alt me-1"></i> Sharjah</span
-                  >
-                </div>
-              </div>
-            </div>
-
-            <!-- Car Card 6 -->
-            <div
-              class="car-card bg-white rounded-3 shadow-sm overflow-hidden"
-              onclick="openCarDetails(6, 'Toyota Land Cruiser', '220,000')"
-              style="cursor: pointer"
-            >
-              <div class="car-image-container position-relative">
-                <img
-                  src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=400&h=250&fit=crop"
-                  alt="Toyota Land Cruiser"
-                  class="car-image"
-                />
-                <button
-                  class="btn btn-sm btn-light favorite-btn position-absolute"
-                  onclick="event.stopPropagation();"
-                >
-                  <i class="far fa-heart"></i>
-                </button>
-              </div>
-              <div class="car-details p-3">
-                <h6 class="car-title mb-2">Toyota Land Cruiser</h6>
-                <p class="car-price mb-2 fw-bold text-primary">AED 220,000</p>
-                <div
-                  class="car-specs d-flex justify-content-between text-muted small"
-                >
-                  <span><i class="fas fa-calendar me-1"></i> 2022</span>
-                  <span
-                    ><i class="fas fa-tachometer-alt me-1"></i> 25,000 km</span
-                  >
-                  <span><i class="fas fa-map-marker-alt me-1"></i> Dubai</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Car Card 7 -->
-            <div
-              class="car-card bg-white rounded-3 shadow-sm overflow-hidden"
-              onclick="openCarDetails(7, 'Nissan Patrol Platinum', '195,000')"
-              style="cursor: pointer"
-            >
-              <div class="car-image-container position-relative">
-                <img
-                  src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=400&h=250&fit=crop"
-                  alt="Nissan Patrol Platinum"
-                  class="car-image"
-                />
-                <button
-                  class="btn btn-sm btn-light favorite-btn position-absolute"
-                  onclick="event.stopPropagation();"
-                >
-                  <i class="far fa-heart"></i>
-                </button>
-              </div>
-              <div class="car-details p-3">
-                <h6 class="car-title mb-2">Nissan Patrol Platinum</h6>
-                <p class="car-price mb-2 fw-bold text-primary">AED 195,000</p>
-                <div
-                  class="car-specs d-flex justify-content-between text-muted small"
-                >
-                  <span><i class="fas fa-calendar me-1"></i> 2023</span>
-                  <span
-                    ><i class="fas fa-tachometer-alt me-1"></i> 12,000 km</span
-                  >
-                  <span><i class="fas fa-map-marker-alt me-1"></i> Al Ain</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Car Card 8 -->
-            <div
-              class="car-card bg-white rounded-3 shadow-sm overflow-hidden"
-              onclick="openCarDetails(8, 'Lexus ES 350', '145,000')"
-              style="cursor: pointer"
-            >
-              <div class="car-image-container position-relative">
-                <img
-                  src="https://images.unsplash.com/photo-1563720223185-11003d516935?w=400&h=250&fit=crop"
-                  alt="Lexus ES 350"
-                  class="car-image"
-                />
-                <button
-                  class="btn btn-sm btn-light favorite-btn position-absolute"
-                  onclick="event.stopPropagation();"
-                >
-                  <i class="far fa-heart"></i>
-                </button>
-              </div>
-              <div class="car-details p-3">
-                <h6 class="car-title mb-2">Lexus ES 350</h6>
-                <p class="car-price mb-2 fw-bold text-primary">AED 145,000</p>
-                <div
-                  class="car-specs d-flex justify-content-between text-muted small"
-                >
-                  <span><i class="fas fa-calendar me-1"></i> 2023</span>
-                  <span
-                    ><i class="fas fa-tachometer-alt me-1"></i> 5,000 km</span
-                  >
-                  <span><i class="fas fa-map-marker-alt me-1"></i> Dubai</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Car Card 9 -->
-            <div
-              class="car-card bg-white rounded-3 shadow-sm overflow-hidden"
-              onclick="openCarDetails(9, 'Ford Mustang GT', '165,000')"
-              style="cursor: pointer"
-            >
-              <div class="car-image-container position-relative">
-                <img
-                  src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=400&h=250&fit=crop"
-                  alt="Ford Mustang GT"
-                  class="car-image"
-                />
-                <button
-                  class="btn btn-sm btn-light favorite-btn position-absolute"
-                  onclick="event.stopPropagation();"
-                >
-                  <i class="far fa-heart"></i>
-                </button>
-              </div>
-              <div class="car-details p-3">
-                <h6 class="car-title mb-2">Ford Mustang GT</h6>
-                <p class="car-price mb-2 fw-bold text-primary">AED 165,000</p>
-                <div
-                  class="car-specs d-flex justify-content-between text-muted small"
-                >
-                  <span><i class="fas fa-calendar me-1"></i> 2024</span>
-                  <span
-                    ><i class="fas fa-tachometer-alt me-1"></i> 2,000 km</span
-                  >
-                  <span><i class="fas fa-map-marker-alt me-1"></i> Dubai</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Pagination -->
-          <div class="d-flex justify-content-center mt-5">
-            <nav aria-label="Car listings pagination">
-              <ul class="pagination">
-                <li class="page-item">
-                  <a class="page-link" href="#" aria-label="Previous">
-                    <span aria-hidden="true">PREV</span>
-                  </a>
-                </li>
-                <li class="page-item active">
-                  <a class="page-link" href="#">1</a>
-                </li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item"><a class="page-link" href="#">...</a></li>
-                <li class="page-item"><a class="page-link" href="#">50</a></li>
-                <li class="page-item">
-                  <a class="page-link" href="#" aria-label="Next">
-                    <span aria-hidden="true">NEXT</span>
-                  </a>
-                </li>
-              </ul>
-            </nav>
-          </div>
-
-          <!-- Results Summary -->
-          <div class="text-center mt-4">
-            <p class="text-muted">24,050 Result</p>
           </div>
         </div>
       </div>

@@ -387,23 +387,162 @@ body {
   margin: 0;
 }
 
-/* Responsive */
-@media (max-width: 991px) {
+/* Enhanced Responsive Design */
+
+/* Large screens (1200px and up) */
+@media (min-width: 1200px) {
   .login-form-container {
-    margin: 1rem;
-    padding: 1.5rem;
+    max-width: 500px;
+    padding: 3rem;
+    margin: 2rem auto;
   }
 
   .login-title {
-    font-size: 1.75rem;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .form-control {
+    padding: 1rem;
+    font-size: 1.1rem;
+  }
+
+  .btn {
+    padding: 1rem;
+    font-size: 1.1rem;
+  }
+
+  .otp-input {
+    width: 65px;
+    height: 65px;
+    font-size: 1.5rem;
   }
 }
 
-@media (max-width: 576px) {
+/* Medium screens (992px to 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .login-form-container {
+    max-width: 450px;
+    padding: 2.5rem;
+    margin: 1.5rem auto;
+  }
+
+  .login-title {
+    font-size: 2.2rem;
+    margin-bottom: 1.8rem;
+  }
+
+  .form-control {
+    padding: 0.9rem;
+    font-size: 1rem;
+  }
+
+  .btn {
+    padding: 0.9rem;
+    font-size: 1rem;
+  }
+
+  .otp-input {
+    width: 60px;
+    height: 60px;
+    font-size: 1.4rem;
+  }
+}
+
+/* Tablet screens (768px to 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .login-form-container {
+    max-width: 400px;
+    margin: 1.5rem auto;
+    padding: 2rem;
+  }
+
+  .login-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .form-control {
+    padding: 0.8rem;
+  }
+
+  .btn {
+    padding: 0.8rem;
+  }
+
+  .otp-input {
+    width: 55px;
+    height: 55px;
+    font-size: 1.3rem;
+  }
+}
+
+/* Mobile screens (576px to 767px) */
+@media (max-width: 767px) {
+  .login-form-container {
+    margin: 1rem;
+    padding: 1.5rem;
+    border-radius: 20px;
+  }
+
+  .login-title {
+    font-size: 1.8rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .form-control {
+    padding: 0.75rem;
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+
+  .btn {
+    padding: 0.75rem;
+    font-size: 1rem;
+  }
+
+  .otp-inputs {
+    gap: 0.7rem;
+    justify-content: center;
+  }
+
+  .otp-input {
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+  }
+
+  .step-indicator {
+    margin-bottom: 1.5rem;
+  }
+
+  .step-indicator .step {
+    width: 35px;
+    height: 35px;
+    font-size: 14px;
+  }
+}
+
+/* Small mobile screens (up to 575px) */
+@media (max-width: 575px) {
   .login-form-container {
     margin: 0.5rem;
-    padding: 1rem;
+    padding: 1.2rem;
     border-radius: 16px;
+  }
+
+  .login-title {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+
+  .form-control {
+    padding: 0.7rem;
+    font-size: 16px;
+  }
+
+  .btn {
+    padding: 0.7rem;
+    font-size: 0.95rem;
   }
 
   .otp-inputs {
@@ -413,5 +552,61 @@ body {
   .otp-input {
     width: 45px;
     height: 45px;
+    font-size: 1.1rem;
+  }
+
+  .step-indicator .step {
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+  }
+
+  .step-indicator .step-line {
+    height: 2px;
+  }
+}
+
+/* Extra small screens (up to 400px) */
+@media (max-width: 400px) {
+  .login-form-container {
+    margin: 0.3rem;
+    padding: 1rem;
+    border-radius: 12px;
+  }
+
+  .login-title {
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .form-control {
+    padding: 0.6rem;
+    font-size: 15px;
+  }
+
+  .btn {
+    padding: 0.6rem;
+    font-size: 0.9rem;
+  }
+
+  .otp-inputs {
+    gap: 0.3rem;
+  }
+
+  .otp-input {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+
+  .step-indicator .step {
+    width: 25px;
+    height: 25px;
+    font-size: 11px;
+  }
+
+  .modal-content {
+    margin: 0.5rem;
+    border-radius: 12px;
   }
 }

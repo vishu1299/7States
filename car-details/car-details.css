@@ -42,11 +42,6 @@ header h2 {
   text-decoration: none;
 }
 
-.navbar-nav .nav-link:hover {
-  color: #2563eb;
-  background-color: #f3f4f6;
-}
-
 .dropdown-toggle {
   border: none;
   background: transparent;
@@ -560,10 +555,214 @@ footer ul li a:hover {
   flex: 0 0 20%; /* 100 ÷ 5 */
   max-width: 20%;
 }
-@media (max-width: 768px) {
+/* Enhanced Responsive Design */
+
+/* Large screens (1200px and up) */
+@media (min-width: 1200px) {
+  .main-car-image {
+    height: 500px;
+  }
+
+  .thumbnail-image {
+    height: 90px;
+  }
+
+  .car-title {
+    font-size: 2.5rem;
+  }
+
+  .price {
+    font-size: 2.5rem;
+  }
+}
+
+/* Medium screens (992px to 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .main-car-image {
+    height: 450px;
+  }
+
+  .thumbnail-image {
+    height: 85px;
+  }
+
+  .car-title {
+    font-size: 2.2rem;
+  }
+
+  .price {
+    font-size: 2.2rem;
+  }
+}
+
+/* Tablet screens (768px to 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .main-car-image {
+    height: 350px;
+  }
+
+  .thumbnail-image {
+    height: 75px;
+  }
+
+  .car-title {
+    font-size: 2rem;
+  }
+
+  .price {
+    font-size: 2rem;
+  }
+
+  .five-cols {
+    flex: 0 0 33.333%;
+    max-width: 33.333%;
+  }
+
+  .action-buttons .btn {
+    padding: 12px 20px;
+    font-size: 16px;
+  }
+}
+
+/* Mobile screens (576px to 767px) */
+@media (max-width: 767px) {
   .five-cols {
     flex: 0 0 50%;
-    max-width: 50%; /* For small screens */
+    max-width: 50%;
+  }
+
+  .main-car-image {
+    height: 280px;
+  }
+
+  .thumbnail-image {
+    height: 65px;
+  }
+
+  .car-title {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .price {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .action-buttons .btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+  }
+
+  .specifications-section .col-md-6:first-child {
+    border-right: none;
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .feature-item {
+    margin-bottom: 1rem;
+    padding: 10px;
+  }
+}
+
+/* Small mobile screens (up to 575px) */
+@media (max-width: 575px) {
+  .main-car-image {
+    height: 250px;
+  }
+
+  .thumbnail-image {
+    height: 55px;
+  }
+
+  .car-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .price {
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .five-cols {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .action-buttons .btn {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .feature-item {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .specifications-section h3 {
+    font-size: 1.3rem;
+  }
+
+  .specifications-section .row {
+    margin: 0;
+  }
+
+  .specifications-section .col-md-6 {
+    padding: 10px;
+  }
+}
+
+/* Extra small screens (up to 400px) */
+@media (max-width: 400px) {
+  .main-car-image {
+    height: 200px;
+  }
+
+  .thumbnail-image {
+    height: 45px;
+  }
+
+  .car-title {
+    font-size: 1.3rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .price {
+    font-size: 1.3rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .action-buttons .btn {
+    padding: 8px;
+    font-size: 13px;
+  }
+
+  .feature-item {
+    padding: 6px;
+    font-size: 13px;
+    margin-bottom: 0.8rem;
+  }
+
+  .specifications-section h3 {
+    font-size: 1.2rem;
+  }
+
+  .specifications-section .col-md-6 {
+    padding: 8px;
+  }
+
+  .container-fluid {
+    padding: 10px;
   }
 }
 

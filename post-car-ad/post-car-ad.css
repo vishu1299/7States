@@ -431,8 +431,123 @@
   transform: translateY(-2px);
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
+/* Enhanced Responsive Design */
+
+/* Large screens (1200px and up) */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+
+  .form-content {
+    padding: 40px;
+  }
+
+  .stepper-container {
+    padding: 40px 30px 30px;
+  }
+
+  .car-illustration-section {
+    padding: 40px 30px 30px;
+  }
+
+  .step-number {
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+  }
+
+  .step-label {
+    font-size: 14px;
+  }
+
+  .features-modern-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+
+  .photo-upload-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+}
+
+/* Medium screens (992px to 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .form-content {
+    padding: 35px;
+  }
+
+  .stepper-container {
+    padding: 35px 25px 25px;
+  }
+
+  .car-illustration-section {
+    padding: 35px 25px 25px;
+  }
+
+  .step-number {
+    width: 45px;
+    height: 45px;
+    font-size: 16px;
+  }
+
+  .step-label {
+    font-size: 13px;
+  }
+
+  .features-modern-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  .photo-upload-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+}
+
+/* Tablet screens (768px to 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .form-content {
+    padding: 30px;
+  }
+
+  .stepper-container {
+    padding: 30px 20px 20px;
+  }
+
+  .car-illustration-section {
+    padding: 30px 20px 20px;
+  }
+
+  .step-number {
+    width: 40px;
+    height: 40px;
+    font-size: 14px;
+  }
+
+  .step-label {
+    font-size: 12px;
+  }
+
+  .features-modern-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .photo-upload-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+
+  .photo-upload-item.main-photo {
+    grid-column: span 3;
+  }
+}
+
+/* Mobile screens (576px to 767px) */
+@media (max-width: 767px) {
   .stepper {
     flex-wrap: wrap;
     gap: 15px;
@@ -457,6 +572,14 @@
     padding: 20px;
   }
 
+  .stepper-container {
+    padding: 25px 15px 15px;
+  }
+
+  .car-illustration-section {
+    padding: 25px 15px 15px;
+  }
+
   .features-modern-grid {
     grid-template-columns: 1fr;
     gap: 20px;
@@ -473,6 +596,7 @@
 
   .photo-upload-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
   }
 
   .photo-upload-item.main-photo {
@@ -490,7 +614,8 @@
   }
 }
 
-@media (max-width: 480px) {
+/* Small mobile screens (up to 575px) */
+@media (max-width: 575px) {
   .car-illustration-section {
     padding: 20px 15px 15px;
   }
@@ -503,13 +628,93 @@
     padding: 15px;
   }
 
+  .step-number {
+    width: 28px;
+    height: 28px;
+    font-size: 11px;
+  }
+
+  .step-label {
+    font-size: 9px;
+  }
+
   .photo-upload-grid {
     grid-template-columns: 1fr;
+    gap: 10px;
   }
 
   .photo-upload-item.main-photo {
     grid-column: span 1;
     aspect-ratio: 1;
+  }
+
+  .feature-label {
+    font-size: 11px;
+    padding: 5px 8px;
+  }
+
+  .green-circle-1 {
+    width: 50px;
+    height: 50px;
+  }
+
+  .green-circle-2 {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+/* Extra small screens (up to 400px) */
+@media (max-width: 400px) {
+  .car-illustration-section {
+    padding: 15px 10px 10px;
+  }
+
+  .stepper-container {
+    padding: 15px 10px 10px;
+  }
+
+  .form-content {
+    padding: 12px;
+  }
+
+  .step-number {
+    width: 25px;
+    height: 25px;
+    font-size: 10px;
+  }
+
+  .step-label {
+    font-size: 8px;
+  }
+
+  .feature-label {
+    font-size: 10px;
+    padding: 4px 6px;
+  }
+
+  .green-circle-1 {
+    width: 40px;
+    height: 40px;
+  }
+
+  .green-circle-2 {
+    width: 60px;
+    height: 60px;
+  }
+
+  .form-group {
+    margin-bottom: 1rem;
+  }
+
+  .form-control {
+    padding: 0.6rem;
+    font-size: 14px;
+  }
+
+  .btn {
+    padding: 0.6rem 1rem;
+    font-size: 14px;
   }
 }
 
@@ -1305,7 +1510,9 @@
   border-radius: 8px;
 }
 
-/* Responsive Design for Step 5 */
+/* Enhanced Responsive Design for Step 5 */
+
+/* Tablet and Mobile screens (768px and below) */
 @media (max-width: 768px) {
   .step-labels {
     gap: 15px;
@@ -1362,5 +1569,72 @@
   .success-actions .btn {
     width: 100%;
     max-width: 250px;
+  }
+}
+
+/* Small mobile screens (575px and below) */
+@media (max-width: 575px) {
+  .step-labels {
+    gap: 10px;
+    font-size: 9px;
+  }
+
+  .progress-steps-new {
+    gap: 6px;
+  }
+
+  .step-circle {
+    width: 30px;
+    height: 30px;
+    font-size: 11px;
+  }
+
+  .step-line {
+    width: 25px;
+  }
+
+  .review-title-new h3 {
+    font-size: 20px;
+  }
+
+  .photos-grid-new {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .photo-item.large {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+}
+
+/* Extra small screens (400px and below) */
+@media (max-width: 400px) {
+  .step-labels {
+    gap: 8px;
+    font-size: 8px;
+  }
+
+  .progress-steps-new {
+    gap: 4px;
+  }
+
+  .step-circle {
+    width: 25px;
+    height: 25px;
+    font-size: 10px;
+  }
+
+  .step-line {
+    width: 20px;
+  }
+
+  .review-title-new h3 {
+    font-size: 18px;
+  }
+
+  .success-actions .btn {
+    padding: 10px 15px;
+    font-size: 14px;
   }
 }

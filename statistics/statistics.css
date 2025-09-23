@@ -1,0 +1,277 @@
+/* Statistics Page Styles */
+
+/* Sidebar Styles */
+.sidebar-container {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.sidebar-menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid #f0f0f0;
+  color: #666;
+  font-weight: 500;
+}
+
+.sidebar-item:last-child {
+  border-bottom: none;
+}
+
+.sidebar-item:hover {
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+.sidebar-item.active {
+  background-color: #fff5f5;
+  color: #dc3545;
+  border-left: 4px solid #dc3545;
+}
+
+.sidebar-item i {
+  font-size: 16px;
+  width: 20px;
+  text-align: center;
+}
+
+.sidebar-item span {
+  font-size: 14px;
+}
+
+/* Main Content Styles */
+.main-content {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+}
+
+.page-title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+/* App Download Section */
+.app-download-section {
+  margin-top: 20px;
+}
+
+.app-download-card {
+  background: #f8f9fa;
+  border: 2px solid #28a745;
+  border-radius: 12px;
+  padding: 40px;
+  text-align: left;
+  position: relative;
+}
+
+.download-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.download-description {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.qr-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.qr-code-container {
+  flex-shrink: 0;
+}
+
+.qr-code {
+  width: 120px;
+  height: 120px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  background: white;
+  padding: 8px;
+}
+
+.qr-text {
+  flex: 1;
+}
+
+.scan-text {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  margin: 0;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .sidebar-menu {
+    flex-direction: row;
+    overflow-x: auto;
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .sidebar-item {
+    flex-direction: column;
+    min-width: 80px;
+    text-align: center;
+    padding: 12px 8px;
+    border-bottom: none;
+    border-radius: 8px;
+    white-space: nowrap;
+  }
+
+  .sidebar-item.active {
+    border-left: none;
+    border-bottom: 3px solid #dc3545;
+  }
+
+  .sidebar-item span {
+    font-size: 12px;
+    margin-top: 4px;
+  }
+
+  .main-content {
+    padding: 20px;
+    margin-top: 20px;
+  }
+
+  .page-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .app-download-card {
+    padding: 25px;
+    text-align: center;
+  }
+
+  .download-title {
+    font-size: 20px;
+  }
+
+  .download-description {
+    font-size: 14px;
+    margin-bottom: 25px;
+  }
+
+  .qr-section {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .qr-code {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 576px) {
+  .app-download-card {
+    padding: 20px;
+  }
+
+  .download-title {
+    font-size: 18px;
+  }
+
+  .download-description {
+    font-size: 13px;
+  }
+
+  .qr-code {
+    width: 90px;
+    height: 90px;
+  }
+
+  .scan-text {
+    font-size: 14px;
+  }
+}
+
+/* Animation for QR code */
+.qr-code {
+  transition: transform 0.3s ease;
+}
+
+.qr-code:hover {
+  transform: scale(1.05);
+}
+
+/* Loading animation for QR code */
+.qr-code-container::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  border: 2px solid #28a745;
+  border-top: 2px solid transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  opacity: 0;
+}
+
+.qr-code-container.loading::before {
+  opacity: 1;
+}
+
+@keyframes spin {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Accessibility improvements */
+.sidebar-item:focus {
+  outline: 2px solid #007bff;
+  outline-offset: 2px;
+}
+
+.qr-code:focus {
+  outline: 2px solid #007bff;
+  outline-offset: 2px;
+}
+
+/* Print styles */
+@media print {
+  .sidebar-container,
+  header,
+  .offcanvas {
+    display: none !important;
+  }
+
+  .main-content {
+    box-shadow: none;
+    border: 1px solid #ddd;
+  }
+
+  .app-download-card {
+    border: 1px solid #28a745;
+    background: white !important;
+  }
+}

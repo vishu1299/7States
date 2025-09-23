@@ -49,16 +49,6 @@ header h2 {
   text-decoration: none;
 }
 
-.navbar-nav .nav-link:hover {
-  color: #2563eb;
-  background-color: #f3f4f6;
-}
-
-.navbar-nav .nav-link.text-primary {
-  color: #2563eb !important;
-  background-color: #eff6ff;
-}
-
 /* Dropdown Styles */
 .dropdown-toggle {
   border: none;
@@ -322,8 +312,113 @@ footer ul li a:hover {
   color: #ffffff !important;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
+/* Enhanced Responsive Design */
+
+/* Large screens (1200px and up) */
+@media (min-width: 1200px) {
+  .sell-hero-section {
+    padding: 80px 0 60px;
+  }
+
+  .hero-title {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+  }
+
+  .sell-form-container {
+    padding: 3rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .post-ad-btn {
+    font-size: 1.2rem;
+    padding: 1.2rem 2.5rem;
+  }
+
+  .mega-dropdown {
+    min-width: 900px;
+    max-width: 1000px;
+  }
+}
+
+/* Medium screens (992px to 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .sell-hero-section {
+    padding: 70px 0 50px;
+  }
+
+  .hero-title {
+    font-size: 3rem;
+    margin-bottom: 1.3rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 1.8rem;
+  }
+
+  .sell-form-container {
+    padding: 2.5rem;
+    max-width: 550px;
+    margin: 0 auto;
+  }
+
+  .post-ad-btn {
+    font-size: 1.1rem;
+    padding: 1.1rem 2.2rem;
+  }
+
+  .mega-dropdown {
+    min-width: 800px;
+    max-width: 900px;
+  }
+}
+
+/* Tablet screens (768px to 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .sell-hero-section {
+    padding: 60px 0 40px;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .sell-form-container {
+    padding: 2rem;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .post-ad-btn {
+    font-size: 1rem;
+    padding: 1rem 2rem;
+  }
+
+  .mega-dropdown {
+    min-width: 600px;
+    max-width: 700px;
+  }
+
+  .car-actions {
+    gap: 0.8rem;
+  }
+}
+
+/* Mobile screens (576px to 767px) */
+@media (max-width: 767px) {
   /* Mobile header adjustments */
   header .container-fluid {
     padding: 1rem 1.5rem;
@@ -364,6 +459,7 @@ footer ul li a:hover {
 
   .sell-form-container {
     padding: 1.5rem;
+    margin: 0 1rem;
   }
 
   .car-actions {
@@ -373,10 +469,24 @@ footer ul li a:hover {
 
   .action-btn {
     justify-content: center;
+    width: 100%;
+  }
+
+  .post-ad-btn {
+    font-size: 1rem;
+    padding: 0.9rem 1.8rem;
+  }
+
+  .mega-dropdown {
+    min-width: 350px;
+    max-width: 400px;
+    left: 0;
+    transform: none;
   }
 }
 
-@media (max-width: 576px) {
+/* Small mobile screens (up to 575px) */
+@media (max-width: 575px) {
   /* Small mobile adjustments */
   header .container-fluid {
     padding: 0.75rem 1rem;
@@ -392,6 +502,7 @@ footer ul li a:hover {
 
   .sell-form-container {
     padding: 1rem;
+    margin: 0 0.5rem;
   }
 
   .car-details {
@@ -403,6 +514,58 @@ footer ul li a:hover {
   .post-ad-btn {
     font-size: 1rem;
     padding: 0.875rem 1.5rem;
+    width: 100%;
+  }
+
+  .mega-dropdown {
+    min-width: 300px;
+    max-width: 350px;
+  }
+
+  .form-control {
+    padding: 0.7rem;
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+}
+
+/* Extra small screens (up to 400px) */
+@media (max-width: 400px) {
+  header .container-fluid {
+    padding: 0.5rem 0.8rem;
+  }
+
+  .hero-title {
+    font-size: 1.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .sell-form-container {
+    padding: 0.8rem;
+    margin: 0 0.3rem;
+  }
+
+  .post-ad-btn {
+    font-size: 0.95rem;
+    padding: 0.8rem 1.3rem;
+  }
+
+  .mega-dropdown {
+    min-width: 280px;
+    max-width: 320px;
+    padding: 1rem;
+  }
+
+  .form-control {
+    padding: 0.6rem;
+    font-size: 15px;
+  }
+
+  .btn-primary {
+    font-size: 13px;
+    padding: 8px 16px;
   }
 }
 

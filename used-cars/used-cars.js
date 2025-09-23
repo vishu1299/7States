@@ -1,125 +1,4 @@
-// Sample car data
-const carData = [
-  {
-    id: 1,
-    title: "Audi Q3 Sportback",
-    price: "94,900",
-    year: "2024",
-    mileage: "0",
-    location: "Dubai",
-    make: "audi",
-    model: "q3",
-    type: "suv",
-    image:
-      "https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=400&h=250&fit=crop",
-  },
-  {
-    id: 2,
-    title: "Audi A4 Premium Plus 2024",
-    price: "111,400",
-    year: "2024",
-    mileage: "0",
-    location: "Dubai",
-    make: "audi",
-    model: "a4",
-    type: "sedan",
-    image:
-      "https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=400&h=250&fit=crop",
-  },
-  {
-    id: 3,
-    title: "Audi Q3 Sportback",
-    price: "150,800",
-    year: "2024",
-    mileage: "0",
-    location: "Dubai",
-    make: "audi",
-    model: "q3",
-    type: "suv",
-    image:
-      "https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=400&h=250&fit=crop",
-  },
-  {
-    id: 4,
-    title: "BMW X5 M Sport",
-    price: "185,000",
-    year: "2023",
-    mileage: "15000",
-    location: "Abu Dhabi",
-    make: "bmw",
-    model: "x5",
-    type: "suv",
-    image:
-      "https://images.unsplash.com/photo-1555215695-3004980ad54e?w=400&h=250&fit=crop",
-  },
-  {
-    id: 5,
-    title: "Mercedes-Benz C-Class",
-    price: "125,000",
-    year: "2023",
-    mileage: "8000",
-    location: "Sharjah",
-    make: "mercedes",
-    model: "c-class",
-    type: "sedan",
-    image:
-      "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=400&h=250&fit=crop",
-  },
-  {
-    id: 6,
-    title: "Toyota Land Cruiser",
-    price: "220,000",
-    year: "2022",
-    mileage: "25000",
-    location: "Dubai",
-    make: "toyota",
-    model: "land-cruiser",
-    type: "suv",
-    image:
-      "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=400&h=250&fit=crop",
-  },
-  {
-    id: 7,
-    title: "Nissan Patrol Platinum",
-    price: "195,000",
-    year: "2023",
-    mileage: "12000",
-    location: "Al Ain",
-    make: "nissan",
-    model: "patrol",
-    type: "suv",
-    image:
-      "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=400&h=250&fit=crop",
-  },
-  {
-    id: 8,
-    title: "Lexus ES 350",
-    price: "145,000",
-    year: "2023",
-    mileage: "5000",
-    location: "Dubai",
-    make: "lexus",
-    model: "es",
-    type: "sedan",
-    image:
-      "https://images.unsplash.com/photo-1563720223185-11003d516935?w=400&h=250&fit=crop",
-  },
-  {
-    id: 9,
-    title: "Ford Mustang GT",
-    price: "165,000",
-    year: "2024",
-    mileage: "2000",
-    location: "Dubai",
-    make: "ford",
-    model: "mustang",
-    type: "coupe",
-    image:
-      "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=400&h=250&fit=crop",
-  },
-];
-
-let filteredCars = [...carData];
+// Filters object for sidebar functionality
 let currentFilters = {
   search: "",
   make: "",
@@ -142,75 +21,11 @@ let currentFilters = {
 document.addEventListener("DOMContentLoaded", function () {
   console.log("DOM loaded, initializing...");
 
-  // Check for URL parameters
-  checkURLParameters();
-
-  // Render initial cars
-  renderCars();
-
-  // Setup event listeners
+  // Setup event listeners for filters
   setupEventListeners();
 
   console.log("Initialization complete");
 });
-
-// Check URL parameters for filtering
-function checkURLParameters() {
-  const urlParams = new URLSearchParams(window.location.search);
-  const filter = urlParams.get("filter");
-  const value = urlParams.get("value");
-
-  if (filter && value) {
-    // Apply the filter based on URL parameters
-    switch (filter) {
-      case "location":
-        currentFilters.location = value;
-        break;
-      case "make":
-        currentFilters.make = value;
-        document.getElementById("makeFilter").value = value;
-        break;
-      case "model":
-        currentFilters.model = value;
-        break;
-      case "type":
-        currentFilters.type = value;
-        break;
-    }
-
-    // Update the results count based on filter
-    updateResultsCount(filter, value);
-  }
-}
-
-// Update results count based on filter
-function updateResultsCount(filter, value) {
-  const resultsElement = document.getElementById("resultsCount");
-  let filterText = "";
-
-  switch (filter) {
-    case "location":
-      filterText = `Used cars in ${value.toUpperCase()}`;
-      break;
-    case "make":
-      filterText = `${
-        value.charAt(0).toUpperCase() + value.slice(1)
-      } Used cars`;
-      break;
-    case "model":
-      filterText = `${value.replace("-", " ").toUpperCase()} Used cars`;
-      break;
-    case "type":
-      filterText = `${
-        value.charAt(0).toUpperCase() + value.slice(1)
-      } Used cars`;
-      break;
-    default:
-      filterText = "Used cars";
-  }
-
-  resultsElement.textContent = `${filteredCars.length} ${filterText}`;
-}
 
 // Setup event listeners
 function setupEventListeners() {
@@ -313,27 +128,6 @@ function setupEventListeners() {
       clearAllFilters();
     });
   }
-
-  // View toggle buttons
-  document.querySelectorAll(".view-toggle").forEach((button) => {
-    button.addEventListener("click", function () {
-      document
-        .querySelectorAll(".view-toggle")
-        .forEach((btn) => btn.classList.remove("active"));
-      this.classList.add("active");
-
-      const view = this.dataset.view;
-      toggleView(view);
-    });
-  });
-
-  // Favorite buttons
-  document.addEventListener("click", function (e) {
-    if (e.target.closest(".favorite-btn")) {
-      e.preventDefault();
-      toggleFavorite(e.target.closest(".favorite-btn"));
-    }
-  });
 
   // Transmission buttons
   const transmissionButtons = document.querySelectorAll(".transmission-btn");
@@ -488,187 +282,10 @@ function setupEventListeners() {
     });
 }
 
-// Apply all filters
+// Apply all filters (simplified - no car data to filter)
 function applyFilters() {
-  filteredCars = carData.filter((car) => {
-    // Search filter
-    if (
-      currentFilters.search &&
-      !car.title.toLowerCase().includes(currentFilters.search)
-    ) {
-      return false;
-    }
-
-    // Make filter
-    if (currentFilters.make && car.make !== currentFilters.make) {
-      return false;
-    }
-
-    // Model filter
-    if (currentFilters.model && car.model !== currentFilters.model) {
-      return false;
-    }
-
-    // Price range filter
-    const carPrice = parseInt(car.price.replace(",", ""));
-    if (
-      currentFilters.minPrice &&
-      carPrice < parseInt(currentFilters.minPrice)
-    ) {
-      return false;
-    }
-    if (
-      currentFilters.maxPrice &&
-      carPrice > parseInt(currentFilters.maxPrice)
-    ) {
-      return false;
-    }
-
-    // Year range filter
-    if (
-      currentFilters.minYear &&
-      parseInt(car.year) < parseInt(currentFilters.minYear)
-    ) {
-      return false;
-    }
-    if (
-      currentFilters.maxYear &&
-      parseInt(car.year) > parseInt(currentFilters.maxYear)
-    ) {
-      return false;
-    }
-
-    // Mileage range filter
-    const carMileage = parseInt(car.mileage);
-    if (
-      currentFilters.minMileage &&
-      carMileage < parseInt(currentFilters.minMileage)
-    ) {
-      return false;
-    }
-    if (
-      currentFilters.maxMileage &&
-      carMileage > parseInt(currentFilters.maxMileage)
-    ) {
-      return false;
-    }
-
-    // Location filter
-    if (
-      currentFilters.location &&
-      car.location.toLowerCase() !== currentFilters.location.toLowerCase()
-    ) {
-      return false;
-    }
-
-    // Type filter
-    if (currentFilters.type && car.type !== currentFilters.type) {
-      return false;
-    }
-
-    return true;
-  });
-
-  // Apply sorting
-  applySorting();
-
-  // Reset to first page when filters change
-  currentPage = 1;
-
-  // Re-render cars
-  renderCars();
-
-  // Update results count
-  const resultsCount = document.getElementById("resultsCount");
-  if (resultsCount) {
-    resultsCount.textContent = `${filteredCars.length} Used cars`;
-  }
-}
-
-// Apply sorting
-function applySorting() {
-  switch (currentFilters.sortBy) {
-    case "price-low":
-      filteredCars.sort(
-        (a, b) =>
-          parseInt(a.price.replace(",", "")) -
-          parseInt(b.price.replace(",", ""))
-      );
-      break;
-    case "price-high":
-      filteredCars.sort(
-        (a, b) =>
-          parseInt(b.price.replace(",", "")) -
-          parseInt(a.price.replace(",", ""))
-      );
-      break;
-    case "year-new":
-      filteredCars.sort((a, b) => parseInt(b.year) - parseInt(a.year));
-      break;
-    case "year-old":
-      filteredCars.sort((a, b) => parseInt(a.year) - parseInt(b.year));
-      break;
-    case "mileage-low":
-      filteredCars.sort((a, b) => parseInt(a.mileage) - parseInt(b.mileage));
-      break;
-    default:
-      // Keep original order for relevance
-      break;
-  }
-}
-
-// Render cars
-function renderCars() {
-  const carGrid = document.getElementById("carGrid");
-  if (!carGrid) {
-    console.error("Car grid element not found");
-    return;
-  }
-
-  if (filteredCars.length === 0) {
-    carGrid.innerHTML = `
-      <div class="col-12">
-        <div class="no-results text-center py-5">
-          <h5 class="text-muted mb-3">No cars found matching your criteria</h5>
-          <p class="text-muted">Try adjusting your filters</p>
-        </div>
-      </div>
-    `;
-    const paginationContainer = document.querySelector(".pagination");
-    if (paginationContainer && paginationContainer.parentElement) {
-      paginationContainer.parentElement.style.display = "none";
-    }
-    return;
-  }
-
-  const carsToShow = getPaginatedCars();
-
-  carGrid.innerHTML = carsToShow
-    .map(
-      (car) => `
-    <div class="car-card bg-white rounded-3 shadow-sm overflow-hidden" onclick="openCarDetails(${car.id}, '${car.title}', '${car.price}')" style="cursor: pointer;">
-      <div class="car-image-container position-relative">
-        <img src="${car.image}" alt="${car.title}" class="car-image">
-        <button class="btn btn-sm btn-light favorite-btn position-absolute" data-car-id="${car.id}" onclick="event.stopPropagation();">
-          <i class="far fa-heart"></i>
-        </button>
-      </div>
-      <div class="car-details p-3">
-        <h6 class="car-title mb-2">${car.title}</h6>
-        <p class="car-price mb-2 fw-bold text-primary">AED ${car.price}</p>
-        <div class="car-specs d-flex justify-content-between text-muted small">
-          <span><i class="fas fa-calendar me-1"></i> ${car.year}</span>
-          <span><i class="fas fa-tachometer-alt me-1"></i> ${car.mileage} km</span>
-          <span><i class="fas fa-map-marker-alt me-1"></i> ${car.location}</span>
-        </div>
-      </div>
-    </div>
-  `
-    )
-    .join("");
-
-  // Setup pagination
-  setupPagination();
+  console.log("Filters applied:", currentFilters);
+  // Filters are applied but no cars to display
 }
 
 // Clear all filters
@@ -746,152 +363,390 @@ function clearAllFilters() {
   document.querySelector(".selected-filters") &&
     (document.querySelector(".selected-filters").innerHTML = "");
 
-  // Reset filtered cars and re-render
-  filteredCars = [...carData];
-  renderCars();
-  document.getElementById(
-    "resultsCount"
-  ).textContent = `${filteredCars.length} Used cars`;
+  console.log("All filters cleared");
 }
 
-// Toggle view (grid/list)
-function toggleView(view) {
-  const carGrid = document.getElementById("carGrid");
+// Car data array
+const carsData = [
+  {
+    id: 1,
+    title: "Audi A3 Sedan 2023",
+    year: "2024",
+    location: "Dubai",
+    mileage: "4k/KM",
+    transmission: "Manual",
+    price: "AED 84,500",
+    address: "Industrial Area 3, Dubai, UAE",
+    image: "../images/productimages/image 19.png",
+    alt: "Audi A3 Sedan",
+  },
+  {
+    id: 2,
+    title: "Audi A4 Premium Plus 2024",
+    year: "2024",
+    location: "Dubai",
+    mileage: "4k/KM",
+    transmission: "Manual",
+    price: "AED 111,400",
+    address: "Industrial Area 3, Dubai, UAE",
+    image: "../images/productimages/image 19.png",
+    alt: "Audi A4 Premium Plus",
+  },
+  {
+    id: 3,
+    title: "Audi Q3 Sportback",
+    year: "2024",
+    location: "Dubai",
+    mileage: "4k/KM",
+    transmission: "Manual",
+    price: "AED 150,800",
+    address: "Industrial Area 3, Dubai, UAE",
+    image: "../images/productimages/image 19.png",
+    alt: "Audi Q3 Sportback",
+  },
+  {
+    id: 4,
+    title: "BMW X3 2024",
+    year: "2024",
+    location: "Dubai",
+    mileage: "8k/KM",
+    transmission: "Automatic",
+    price: "AED 195,000",
+    address: "Al Quoz, Dubai, UAE",
+    image: "../images/productimages/image 19.png",
+    alt: "BMW X3",
+  },
+  {
+    id: 5,
+    title: "Mercedes C-Class 2023",
+    year: "2023",
+    location: "Dubai",
+    mileage: "12k/KM",
+    transmission: "Automatic",
+    price: "AED 175,500",
+    address: "Business Bay, Dubai, UAE",
+    image: "../images/productimages/image 19.png",
+    alt: "Mercedes C-Class",
+  },
+  {
+    id: 6,
+    title: "Toyota Camry 2024",
+    year: "2024",
+    location: "Dubai",
+    mileage: "5k/KM",
+    transmission: "Automatic",
+    price: "AED 125,000",
+    address: "Deira, Dubai, UAE",
+    image: "../images/productimages/image 19.png",
+    alt: "Toyota Camry",
+  },
+  {
+    id: 7,
+    title: "Honda Accord 2023",
+    year: "2023",
+    location: "Dubai",
+    mileage: "15k/KM",
+    transmission: "Automatic",
+    price: "AED 98,000",
+    address: "Jumeirah, Dubai, UAE",
+    image: "../images/productimages/image 19.png",
+    alt: "Honda Accord",
+  },
+  {
+    id: 8,
+    title: "Nissan Altima 2024",
+    year: "2024",
+    location: "Dubai",
+    mileage: "7k/KM",
+    transmission: "CVT",
+    price: "AED 89,500",
+    address: "Motor City, Dubai, UAE",
+    image: "../images/productimages/image 19.png",
+    alt: "Nissan Altima",
+  },
+  {
+    id: 9,
+    title: "Lexus ES 350 2023",
+    year: "2023",
+    location: "Dubai",
+    mileage: "18k/KM",
+    transmission: "Automatic",
+    price: "AED 165,000",
+    address: "Downtown Dubai, UAE",
+    image: "../images/productimages/image 19.png",
+    alt: "Lexus ES",
+  },
+];
 
-  if (view === "list") {
-    carGrid.classList.add("list-view");
+// Function to render car cards
+function renderCarCards() {
+  const carListingsContainer = document.getElementById("car-listings");
+
+  const carCardsHTML = carsData
+    .map(
+      (car) => `
+    <div class="col-lg-4 col-md-6">
+      <div class="car-card" data-car-id="${car.id}">
+        <div class="heart-icon">
+          <i class="far fa-heart"></i>
+        </div>
+        <img
+          src="${car.image}"
+          alt="${car.alt}"
+          class="car-image"
+        />
+        <div class="car-title">${car.title}</div>
+        <div class="car-specs">
+          <span
+            style="
+              background-color: rgba(128, 128, 128, 0.234);
+              border-radius: 10px;
+
+              font-size: 12px;
+            "
+            class="spec-item p-2"
+          >${car.year}</span>
+          <span style="
+              background-color: rgba(128, 128, 128, 0.234);
+              border-radius: 10px;
+              font-size: 12px;
+            " class="spec-item p-2">${car.location}</span>
+          <span style="
+              background-color: rgba(128, 128, 128, 0.234);
+              border-radius: 10px;
+              font-size: 12px;
+            " class="spec-item p-2">${car.mileage}</span>
+          <span style="
+              background-color: rgba(128, 128, 128, 0.234);
+              border-radius: 10px;
+              font-size: 12px;
+            " class="spec-item p-2">${car.transmission}</span>
+        </div>
+        <div class="price">${car.price}</div>
+        <div class="location">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>${car.address}</span>
+        </div>
+      </div>
+    </div>
+  `
+    )
+    .join("");
+
+  carListingsContainer.innerHTML = carCardsHTML;
+}
+
+// Authentication functions
+function checkLoginStatus() {
+  const user = localStorage.getItem("loggedInUser");
+  return user ? JSON.parse(user) : null;
+}
+
+function updateAuthUI() {
+  const user = checkLoginStatus();
+
+  // Desktop elements
+  const desktopNotLoggedIn = document.getElementById(
+    "desktop-auth-not-logged-in"
+  );
+  const desktopLoggedIn = document.getElementById("desktop-auth-logged-in");
+  const desktopUsername = document.getElementById("desktop-username");
+
+  // Mobile elements
+  const mobileNotLoggedIn = document.getElementById(
+    "mobile-auth-not-logged-in"
+  );
+  const mobileLoggedIn = document.getElementById("mobile-auth-logged-in");
+  const mobileUsername = document.getElementById("mobile-username");
+
+  console.log("User login status:", user); // Debug log
+
+  if (user) {
+    // User is logged in
+    console.log("Showing logged in state"); // Debug log
+    if (desktopNotLoggedIn) {
+      desktopNotLoggedIn.style.setProperty("display", "none", "important");
+    }
+    if (desktopLoggedIn) {
+      desktopLoggedIn.style.setProperty("display", "flex", "important");
+    }
+    if (desktopUsername)
+      desktopUsername.textContent = user.name || user.email || "User";
+
+    if (mobileNotLoggedIn) {
+      mobileNotLoggedIn.style.setProperty("display", "none", "important");
+    }
+    if (mobileLoggedIn) {
+      mobileLoggedIn.style.setProperty("display", "block", "important");
+    }
+    if (mobileUsername)
+      mobileUsername.textContent = user.name || user.email || "User";
+
+    // Add logout functionality
+    const desktopLogoutBtn = document.getElementById("desktop-logout-btn");
+    const mobileLogoutBtn = document.getElementById("mobile-logout-btn");
+
+    if (desktopLogoutBtn) {
+      desktopLogoutBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        logout();
+      });
+    }
+
+    if (mobileLogoutBtn) {
+      mobileLogoutBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        logout();
+      });
+    }
+
+    // Add My Ads functionality
+    const desktopMyAdsBtn = document.getElementById("desktop-my-ads-btn");
+    const mobileMyAdsBtn = document.getElementById("mobile-my-ads-btn");
+
+    if (desktopMyAdsBtn) {
+      desktopMyAdsBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        // Navigate to My Ads page (you can change this URL as needed)
+        alert("My Ads functionality - Navigate to user's ads page");
+      });
+    }
+
+    if (mobileMyAdsBtn) {
+      mobileMyAdsBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        // Navigate to My Ads page (you can change this URL as needed)
+        alert("My Ads functionality - Navigate to user's ads page");
+      });
+    }
   } else {
-    carGrid.classList.remove("list-view");
-  }
-}
+    // User is not logged in
+    console.log("Showing not logged in state"); // Debug log
+    if (desktopNotLoggedIn) {
+      desktopNotLoggedIn.style.setProperty("display", "flex", "important");
+    }
+    if (desktopLoggedIn) {
+      desktopLoggedIn.style.setProperty("display", "none", "important");
+    }
 
-// Toggle favorite
-function toggleFavorite(button) {
-  const icon = button.querySelector("i");
-
-  if (icon.classList.contains("far")) {
-    icon.classList.remove("far");
-    icon.classList.add("fas");
-    button.style.color = "#dc3545";
-  } else {
-    icon.classList.remove("fas");
-    icon.classList.add("far");
-    button.style.color = "#6b7280";
-  }
-}
-
-// Pagination functionality
-let currentPage = 1;
-const carsPerPage = 9;
-
-function setupPagination() {
-  const totalPages = Math.ceil(filteredCars.length / carsPerPage);
-  const paginationContainer = document.querySelector(".pagination");
-
-  if (totalPages <= 1) {
-    paginationContainer.parentElement.style.display = "none";
-    return;
-  }
-
-  paginationContainer.parentElement.style.display = "flex";
-
-  // Clear existing pagination
-  paginationContainer.innerHTML = "";
-
-  // Previous button
-  const prevItem = document.createElement("li");
-  prevItem.className = `page-item ${currentPage === 1 ? "disabled" : ""}`;
-  prevItem.innerHTML = `
-    <a class="page-link" href="#" aria-label="Previous" data-page="${
-      currentPage - 1
-    }">
-      <span aria-hidden="true">PREV</span>
-    </a>
-  `;
-  paginationContainer.appendChild(prevItem);
-
-  // Page numbers
-  const startPage = Math.max(1, currentPage - 2);
-  const endPage = Math.min(totalPages, currentPage + 2);
-
-  if (startPage > 1) {
-    const firstItem = document.createElement("li");
-    firstItem.className = "page-item";
-    firstItem.innerHTML = `<a class="page-link" href="#" data-page="1">1</a>`;
-    paginationContainer.appendChild(firstItem);
-
-    if (startPage > 2) {
-      const dotsItem = document.createElement("li");
-      dotsItem.className = "page-item disabled";
-      dotsItem.innerHTML = `<a class="page-link" href="#">...</a>`;
-      paginationContainer.appendChild(dotsItem);
+    if (mobileNotLoggedIn) {
+      mobileNotLoggedIn.style.setProperty("display", "block", "important");
+    }
+    if (mobileLoggedIn) {
+      mobileLoggedIn.style.setProperty("display", "none", "important");
     }
   }
+}
 
-  for (let i = startPage; i <= endPage; i++) {
-    const pageItem = document.createElement("li");
-    pageItem.className = `page-item ${i === currentPage ? "active" : ""}`;
-    pageItem.innerHTML = `<a class="page-link" href="#" data-page="${i}">${i}</a>`;
-    paginationContainer.appendChild(pageItem);
+function logout() {
+  localStorage.removeItem("loggedInUser");
+  updateAuthUI();
+  // Optional: Show logout success message
+  alert("You have been logged out successfully!");
+}
+
+// Simulate login function (for testing purposes)
+function simulateLogin(userId, userName, userEmail) {
+  const userData = {
+    id: userId,
+    name: userName,
+    email: userEmail,
+    loginTime: new Date().toISOString(),
+  };
+  localStorage.setItem("loggedInUser", JSON.stringify(userData));
+  updateAuthUI();
+  alert(`Login simulated! You are now logged in as ${userData.name}`);
+}
+
+// Add heart click functionality and card navigation for new card design
+document.addEventListener("DOMContentLoaded", function () {
+  // Check login status and update UI on page load
+  updateAuthUI();
+
+  // Render car cards first
+  renderCarCards();
+
+  // Logout button event listeners
+  const desktopLogoutBtn = document.getElementById("desktop-logout-btn");
+  const mobileLogoutBtn = document.getElementById("mobile-logout-btn");
+
+  if (desktopLogoutBtn) {
+    desktopLogoutBtn.addEventListener("click", function (e) {
+      e.preventDefault();
+      logout();
+    });
   }
 
-  if (endPage < totalPages) {
-    if (endPage < totalPages - 1) {
-      const dotsItem = document.createElement("li");
-      dotsItem.className = "page-item disabled";
-      dotsItem.innerHTML = `<a class="page-link" href="#">...</a>`;
-      paginationContainer.appendChild(dotsItem);
-    }
-
-    const lastItem = document.createElement("li");
-    lastItem.className = "page-item";
-    lastItem.innerHTML = `<a class="page-link" href="#" data-page="${totalPages}">${totalPages}</a>`;
-    paginationContainer.appendChild(lastItem);
+  if (mobileLogoutBtn) {
+    mobileLogoutBtn.addEventListener("click", function (e) {
+      e.preventDefault();
+      logout();
+    });
   }
 
-  // Next button
-  const nextItem = document.createElement("li");
-  nextItem.className = `page-item ${
-    currentPage === totalPages ? "disabled" : ""
-  }`;
-  nextItem.innerHTML = `
-    <a class="page-link" href="#" aria-label="Next" data-page="${
-      currentPage + 1
-    }">
-      <span aria-hidden="true">NEXT</span>
-    </a>
-  `;
-  paginationContainer.appendChild(nextItem);
+  // Profile and My Cars links (placeholder functionality)
+  const profileLinks = document.querySelectorAll(
+    "#desktop-profile-link, #mobile-profile-link"
+  );
+  const myCarsLinks = document.querySelectorAll(
+    "#desktop-my-cars-link, #mobile-my-cars-link"
+  );
 
-  // Add click event listeners
-  paginationContainer.addEventListener("click", function (e) {
-    e.preventDefault();
-    const link = e.target.closest("a[data-page]");
-    if (link && !link.parentElement.classList.contains("disabled")) {
-      const page = parseInt(link.dataset.page);
-      if (page >= 1 && page <= totalPages) {
-        currentPage = page;
-        renderCars();
-        setupPagination();
-        window.scrollTo({ top: 0, behavior: "smooth" });
+  profileLinks.forEach((link) => {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+      alert("Profile page - Coming soon!");
+    });
+  });
+
+  myCarsLinks.forEach((link) => {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+      alert("My Cars page - Coming soon!");
+    });
+  });
+
+  // Heart icon functionality (using event delegation)
+  document.addEventListener("click", function (e) {
+    if (e.target.closest(".heart-icon")) {
+      e.stopPropagation(); // Prevent card click when clicking heart
+      const heartIcon = e.target.closest(".heart-icon");
+      const icon = heartIcon.querySelector("i");
+      if (icon.classList.contains("far")) {
+        icon.classList.remove("far");
+        icon.classList.add("fas");
+        icon.style.color = "#ff4757";
+      } else {
+        icon.classList.remove("fas");
+        icon.classList.add("far");
+        icon.style.color = "#90EE90";
       }
     }
   });
-}
 
-function getPaginatedCars() {
-  const startIndex = (currentPage - 1) * carsPerPage;
-  const endIndex = startIndex + carsPerPage;
-  return filteredCars.slice(startIndex, endIndex);
-}
-
-// Open car details page
-function openCarDetails(carId, carTitle, carPrice) {
-  const params = new URLSearchParams({
-    id: carId,
-    title: carTitle,
-    price: carPrice,
+  // Card click functionality to navigate to car details (using event delegation)
+  document.addEventListener("click", function (e) {
+    const carCard = e.target.closest(".car-card");
+    if (carCard && !e.target.closest(".heart-icon")) {
+      const carId = carCard.getAttribute("data-car-id");
+      if (carId) {
+        // Navigate to car details page with car ID
+        window.location.href = `../car-details/car-details.html?id=${carId}`;
+      }
+    }
   });
+});
 
-  window.location.href = `../car-details/car-details.html?${params.toString()}`;
-}
+// Global function to simulate login (for testing - you can call this from browser console)
+window.simulateLogin = simulateLogin;
+
+// Simulate login for testing
+localStorage.setItem(
+  "loggedInUser",
+  JSON.stringify({
+    id: 1,
+    name: "Your Name",
+    email: "your.email@example.com",
+  })
+);
+location.reload();

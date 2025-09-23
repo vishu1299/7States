@@ -289,8 +289,105 @@ body {
   color: #007bff;
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
+/* Enhanced Responsive Design */
+
+/* Large screens (1200px and up) */
+@media (min-width: 1200px) {
+  .login-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+  }
+
+  .form-section {
+    padding: 60px 50px;
+  }
+
+  .form-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .form-control {
+    padding: 1rem;
+    font-size: 1.1rem;
+  }
+
+  .btn {
+    padding: 1rem;
+    font-size: 1.1rem;
+  }
+
+  .mega-dropdown {
+    min-width: 400px;
+  }
+}
+
+/* Medium screens (992px to 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .login-container {
+    max-width: 1000px;
+    margin: 1.5rem auto;
+  }
+
+  .form-section {
+    padding: 50px 40px;
+  }
+
+  .form-section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1.8rem;
+  }
+
+  .form-control {
+    padding: 0.9rem;
+    font-size: 1rem;
+  }
+
+  .btn {
+    padding: 0.9rem;
+    font-size: 1rem;
+  }
+
+  .mega-dropdown {
+    min-width: 380px;
+  }
+}
+
+/* Tablet screens (768px to 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .login-container {
+    margin: 1rem;
+    border-radius: 20px;
+  }
+
+  .form-section {
+    padding: 40px 35px;
+  }
+
+  .form-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .form-control {
+    padding: 0.8rem;
+  }
+
+  .btn {
+    padding: 0.8rem;
+  }
+
+  .mega-dropdown {
+    min-width: 350px;
+  }
+
+  .image-section {
+    min-height: 400px;
+  }
+}
+
+/* Mobile screens (576px to 767px) */
+@media (max-width: 767px) {
   .login-container {
     margin: 0;
     border-radius: 0;
@@ -305,10 +402,115 @@ body {
     padding: 40px 30px;
   }
 
+  .form-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .form-control {
+    padding: 0.75rem;
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+
+  .btn {
+    padding: 0.75rem;
+    font-size: 1rem;
+  }
+
   .mega-dropdown {
     min-width: 300px;
     left: 0;
     transform: none;
+  }
+
+  .step-indicator {
+    margin-bottom: 1.5rem;
+  }
+
+  .step-indicator .step {
+    width: 35px;
+    height: 35px;
+    font-size: 14px;
+  }
+}
+
+/* Small mobile screens (up to 575px) */
+@media (max-width: 575px) {
+  .form-section {
+    padding: 30px 20px;
+  }
+
+  .form-section h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+
+  .form-control {
+    padding: 0.7rem;
+    font-size: 16px;
+  }
+
+  .btn {
+    padding: 0.7rem;
+    font-size: 0.95rem;
+  }
+
+  .mega-dropdown {
+    min-width: 280px;
+  }
+
+  .step-indicator .step {
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+  }
+
+  .step-indicator .step-line {
+    height: 2px;
+  }
+
+  .form-group {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Extra small screens (up to 400px) */
+@media (max-width: 400px) {
+  .form-section {
+    padding: 25px 15px;
+  }
+
+  .form-section h2 {
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .form-control {
+    padding: 0.6rem;
+    font-size: 15px;
+  }
+
+  .btn {
+    padding: 0.6rem;
+    font-size: 0.9rem;
+  }
+
+  .mega-dropdown {
+    min-width: 260px;
+  }
+
+  .step-indicator .step {
+    width: 25px;
+    height: 25px;
+    font-size: 11px;
+  }
+
+  .form-group {
+    margin-bottom: 0.8rem;
+  }
+
+  .form-group label {
+    font-size: 14px;
   }
 }
 
