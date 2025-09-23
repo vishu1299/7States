@@ -1,3 +1,43 @@
+/* Theme Colors - Red and Green */
+.text-red {
+  color: #dc2626 !important;
+}
+
+.text-green {
+  color: #22c55e !important;
+}
+
+.border-green {
+  border-color: #22c55e !important;
+}
+
+/* Override Bootstrap Blue Colors */
+.text-primary {
+  color: #22c55e !important;
+}
+
+.bg-primary {
+  background-color: #22c55e !important;
+}
+
+.border-primary {
+  border-color: #22c55e !important;
+}
+
+.btn-primary {
+  background-color: #22c55e !important;
+  border-color: #22c55e !important;
+  color: white !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+  background-color: #16a34a !important;
+  border-color: #16a34a !important;
+  color: white !important;
+}
+
 /* My Leads Page Styles */
 
 /* Sidebar Styles */
@@ -338,7 +378,7 @@
 }
 
 .mega-dropdown .dropdown-item:hover {
-  color: #2563eb;
+  color: #22c55e;
   background-color: transparent;
   padding-left: 0.5rem;
 }

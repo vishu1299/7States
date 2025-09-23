@@ -1,5 +1,45 @@
 /* Signup Page Styles */
 
+/* Theme Colors - Red and Green */
+.text-red {
+  color: #dc2626 !important;
+}
+
+.text-green {
+  color: #22c55e !important;
+}
+
+.border-green {
+  border-color: #22c55e !important;
+}
+
+/* Override Bootstrap Blue Colors */
+.text-primary {
+  color: #22c55e !important;
+}
+
+.bg-primary {
+  background-color: #22c55e !important;
+}
+
+.border-primary {
+  border-color: #22c55e !important;
+}
+
+.btn-primary {
+  background-color: #22c55e !important;
+  border-color: #22c55e !important;
+  color: white !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+  background-color: #16a34a !important;
+  border-color: #16a34a !important;
+  color: white !important;
+}
+
 /* Header Styles */
 .mega-dropdown {
   min-width: 800px;
@@ -128,13 +168,13 @@ body {
 }
 
 .phone-input-container:focus-within {
-  border-color: #007bff;
-  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  border-color: #22c55e;
+  box-shadow: 0 0 0 0.2rem rgba(34, 197, 94, 0.25);
 }
 
 .continue-btn {
   height: 50px;
-  background-color: #007bff;
+  background-color: #22c55e;
   border: none;
   border-radius: 8px;
   font-weight: 600;
@@ -143,7 +183,7 @@ body {
 }
 
 .continue-btn:hover {
-  background-color: #0056b3;
+  background-color: #16a34a;
 }
 
 .divider {
@@ -194,7 +234,7 @@ body {
 }
 
 .terms-text a {
-  color: #007bff;
+  color: #22c55e;
   text-decoration: none;
 }
 
@@ -205,7 +245,7 @@ body {
 }
 
 .signup-link a {
-  color: #007bff;
+  color: #22c55e;
   text-decoration: none;
   font-weight: 500;
 }
@@ -245,7 +285,7 @@ body {
 }
 
 .back-btn:hover {
-  color: #007bff;
+  color: #22c55e;
 }
 
 /* Modal Styles */
@@ -272,7 +312,7 @@ body {
 }
 
 .otp-input:focus {
-  border-color: #007bff;
+  border-color: #22c55e;
   outline: none;
 }
 
@@ -286,7 +326,7 @@ body {
   justify-content: center;
   margin: 0 auto 20px;
   font-size: 24px;
-  color: #007bff;
+  color: #22c55e;
 }
 
 /* Enhanced Responsive Design */

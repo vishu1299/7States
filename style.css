@@ -1,5 +1,93 @@
 /* Custom styles for 7 States project */
 
+/* Theme Colors - Red and Green */
+.text-red {
+  color: #dc2626 !important;
+}
+
+.text-green {
+  color: #22c55e !important;
+}
+
+.border-green {
+  border-color: #22c55e !important;
+}
+
+/* Override Bootstrap Blue Colors */
+.text-primary {
+  color: #22c55e !important;
+}
+
+.bg-primary {
+  background-color: #22c55e !important;
+}
+
+.border-primary {
+  border-color: #22c55e !important;
+}
+
+/* Override any remaining blue colors */
+.btn:focus,
+.btn:active,
+.btn.active {
+  box-shadow: 0 0 0 0.2rem rgba(34, 197, 94, 0.25) !important;
+}
+
+/* Form controls focus */
+.form-control:focus,
+.form-select:focus {
+  border-color: #22c55e !important;
+  box-shadow: 0 0 0 0.2rem rgba(34, 197, 94, 0.25) !important;
+}
+
+/* Comprehensive Blue Color Override */
+/* Override any Bootstrap or custom blue colors */
+.btn-info,
+.btn-info:hover,
+.btn-info:focus,
+.btn-info:active {
+  background-color: #22c55e !important;
+  border-color: #22c55e !important;
+  color: white !important;
+}
+
+.btn-outline-info,
+.btn-outline-info:hover,
+.btn-outline-info:focus,
+.btn-outline-info:active {
+  color: #22c55e !important;
+  border-color: #22c55e !important;
+}
+
+.btn-outline-info:hover,
+.btn-outline-info:focus,
+.btn-outline-info:active {
+  background-color: #22c55e !important;
+  color: white !important;
+}
+
+/* Links */
+a {
+  color: #22c55e !important;
+}
+
+a:hover {
+  color: #16a34a !important;
+}
+
+/* Any remaining blue elements */
+*[style*="color: blue"],
+*[style*="color: #0000ff"],
+*[style*="color: #22c55e"],
+*[style*="color: #22c55e"],
+*[style*="background-color: blue"],
+*[style*="background-color: #0000ff"],
+*[style*="background-color: #22c55e"],
+*[style*="background-color: #22c55e"] {
+  color: #22c55e !important;
+  background-color: #22c55e !important;
+}
+
 /* Header Styles */
 header {
   border-bottom: 1px solid #e5e5e5;
@@ -53,7 +141,7 @@ header h2 {
 }
 
 .navbar-nav .nav-link:hover {
-  color: #1f2937 !important;
+  color: #22c55e !important;
 }
 
 /* Auth Links Styles */
@@ -68,23 +156,53 @@ header h2 {
   color: #1f2937;
 }
 
-/* Sell My Car Button Styles */
+/* Sell My Car Button Styles - Updated to Green Theme */
 .btn-primary {
-  background-color: #2563eb;
-  border-color: #2563eb;
+  background-color: #22c55e;
+  border-color: #22c55e;
   border-radius: 50px;
   padding: 12px 24px;
   font-size: 15px;
   font-weight: 600;
   transition: all 0.2s ease;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  color: white;
 }
 
 .btn-primary:hover {
-  background-color: #1d4ed8;
-  border-color: #1d4ed8;
+  background-color: #16a34a;
+  border-color: #16a34a;
   transform: translateY(-1px);
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  color: white;
+}
+
+.btn-primary:focus,
+.btn-primary:active {
+  background-color: #16a34a;
+  border-color: #16a34a;
+  color: white;
+  box-shadow: 0 0 0 0.2rem rgba(34, 197, 94, 0.25);
+}
+
+/* Outline Primary Button - Green Theme */
+.btn-outline-primary {
+  color: #22c55e;
+  border-color: #22c55e;
+}
+
+.btn-outline-primary:hover {
+  background-color: #22c55e;
+  border-color: #22c55e;
+  color: white;
+}
+
+.btn-outline-primary:focus,
+.btn-outline-primary:active {
+  background-color: #22c55e;
+  border-color: #22c55e;
+  color: white;
+  box-shadow: 0 0 0 0.2rem rgba(34, 197, 94, 0.25);
 }
 
 /* Mobile Menu Toggle */
@@ -261,8 +379,8 @@ footer ul li a:hover {
   }
 
   .search-form .form-select-lg:focus {
-    border-color: #2563eb;
-    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    border-color: #22c55e;
+    box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.1);
   }
 
   .search-form .form-label {
@@ -398,7 +516,7 @@ footer ul li a:hover {
 }
 
 .mega-dropdown .dropdown-item:hover {
-  color: #2563eb;
+  color: #22c55e;
   background-color: transparent;
   padding-left: 0.5rem;
 }
@@ -484,8 +602,8 @@ footer ul li a:hover {
 }
 
 .search-form .form-select:focus {
-  border-color: #2563eb;
-  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+  border-color: #22c55e;
+  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.1);
 }
 
 .search-form .form-label {
@@ -496,20 +614,20 @@ footer ul li a:hover {
 
 /* Search button styling */
 .search-form .btn-primary {
-  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
   border: none;
   border-radius: 12px;
   padding: 14px 32px;
   font-size: 16px;
   font-weight: 600;
-  box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.3);
+  box-shadow: 0 4px 6px -1px rgba(34, 197, 94, 0.3);
   transition: all 0.2s ease;
 }
 
 .search-form .btn-primary:hover {
-  background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
+  background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
   transform: translateY(-1px);
-  box-shadow: 0 6px 8px -1px rgba(37, 99, 235, 0.4);
+  box-shadow: 0 6px 8px -1px rgba(34, 197, 94, 0.4);
 }
 
 /* Car Brand Logos */
@@ -742,7 +860,7 @@ footer ul li a:hover {
 /* Swiper Navigation Buttons */
 .swiper-button-next,
 .swiper-button-prev {
-  color: #2563eb !important;
+  color: #22c55e !important;
   background: white;
   width: 50px !important;
   height: 50px !important;
@@ -765,7 +883,7 @@ footer ul li a:hover {
 
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
-  background: #2563eb;
+  background: #22c55e;
   color: white !important;
   transform: translateY(-50%) scale(1.05);
 }
@@ -847,7 +965,7 @@ footer ul li a:hover {
   border-radius: 50%;
   border: 1px solid #e5e7eb;
   background: white;
-  color: #2563eb;
+  color: #22c55e;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -856,7 +974,7 @@ footer ul li a:hover {
 }
 
 .brands-nav-btn:hover {
-  background: #2563eb;
+  background: #22c55e;
   color: white;
   transform: scale(1.05);
 }
@@ -868,7 +986,7 @@ footer ul li a:hover {
 
 .brands-nav-btn:disabled:hover {
   background: white;
-  color: #2563eb;
+  color: #22c55e;
   transform: none;
 }
 
@@ -942,7 +1060,7 @@ footer ul li a:hover {
 
 .diagonal-banner-left {
   flex: 1;
-  background-color: #2563eb;
+  background-color: #22c55e;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -972,7 +1090,7 @@ footer ul li a:hover {
 .diagonal-separator {
   width: 0;
   height: 0;
-  border-left: 50px solid #2563eb;
+  border-left: 50px solid #22c55e;
   border-top: 50px solid transparent;
   border-bottom: 50px solid transparent;
   position: absolute;
@@ -1114,7 +1232,7 @@ footer ul li a:hover {
   border-radius: 50%;
   border: 1px solid #e5e7eb;
   background: white;
-  color: #2563eb;
+  color: #22c55e;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1123,7 +1241,7 @@ footer ul li a:hover {
 }
 
 .comparisons-nav-btn:hover {
-  background: #2563eb;
+  background: #22c55e;
   color: white;
   transform: scale(1.05);
 }
@@ -1419,7 +1537,7 @@ footer ul li a:hover {
 }
 
 .cta-button {
-  background-color: #3498db;
+  background-color: #22c55e;
   color: white;
   border: none;
   padding: 15px 30px;
@@ -1431,13 +1549,13 @@ footer ul li a:hover {
   align-items: center;
   gap: 10px;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+  box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);
 }
 
 .cta-button:hover {
-  background-color: #2980b9;
+  background-color: #16a34a;
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+  box-shadow: 0 6px 20px rgba(34, 197, 94, 0.4);
 }
 
 .car-icon {

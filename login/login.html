@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -17,376 +17,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
-    <style>
-      body {
-        margin: 0;
-        padding: 0;
-        background-color: #f8f9fa;
-      }
-
-      .login-container {
-        border-radius: 20px;
-        overflow: hidden;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        max-width: 1000px;
-        margin: 20px auto;
-        background: white;
-        max-height: fit-content;
-      }
-
-      .image-section {
-        background: url("https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80")
-          center/cover;
-        height: 100%;
-        border-radius: 20px 0 0 20px;
-      }
-
-      .form-section {
-        padding: 60px 40px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        height: 100%;
-      }
-
-      .login-title {
-        font-size: 28px;
-        font-weight: 600;
-        color: #333;
-        margin-bottom: 30px;
-      }
-
-      .form-label {
-        font-weight: 500;
-        color: #666;
-        margin-bottom: 8px;
-        font-size: 14px;
-      }
-
-      .phone-input-container {
-        position: relative;
-        margin-bottom: 20px;
-        display: flex;
-        border: 1px solid #ddd;
-        border-radius: 8px;
-        overflow: hidden;
-        height: 50px;
-      }
-
-      .country-code {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        padding: 0 12px;
-        background-color: #f8f9fa;
-        border-right: 1px solid #ddd;
-        font-weight: 500;
-        color: #333;
-        min-width: 80px;
-        justify-content: center;
-      }
-
-      .flag-icon {
-        width: 20px;
-        height: 15px;
-        border-radius: 2px;
-      }
-
-      .phone-input {
-        flex: 1;
-        height: 100%;
-        border: none;
-        outline: none;
-        padding: 0 12px;
-        font-size: 16px;
-        background-color: white;
-      }
-
-      .phone-input:focus {
-        outline: none;
-      }
-
-      .phone-input-container:focus-within {
-        border-color: #007bff;
-        box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-      }
-
-      /* Email and Password Input Styles */
-      .form-control {
-        height: 50px;
-        border: 1px solid #ddd !important;
-        border-radius: 8px !important;
-        padding: 0 12px !important;
-        font-size: 16px !important;
-        background-color: white !important;
-      }
-
-      .form-control:focus {
-        border-color: #007bff !important;
-        box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25) !important;
-        outline: none !important;
-      }
-
-      .form-control::placeholder {
-        color: #999 !important;
-      }
-
-      .continue-btn {
-        height: 50px;
-        background-color: #007bff;
-        border: none;
-        border-radius: 8px;
-        font-weight: 600;
-        font-size: 16px;
-        margin-bottom: 20px;
-      }
-
-      .continue-btn:hover {
-        background-color: #0056b3;
-      }
-
-      .divider {
-        text-align: center;
-        margin: 20px 0;
-        position: relative;
-      }
-
-      .divider::before {
-        content: "";
-        position: absolute;
-        top: 50%;
-        left: 0;
-        right: 0;
-        height: 1px;
-        background-color: #ddd;
-      }
-
-      .divider span {
-        background: white;
-        padding: 0 15px;
-        color: #666;
-        font-size: 14px;
-      }
-
-      .social-btn {
-        height: 50px;
-        border: 1px solid #ddd;
-        border-radius: 8px;
-        font-weight: 500;
-        margin-bottom: 15px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-      }
-
-      .social-btn:hover {
-        background-color: #f8f9fa;
-        border-color: #ccc;
-      }
-
-      .terms-text {
-        font-size: 12px;
-        color: #666;
-        text-align: center;
-        margin: 20px 0;
-      }
-
-      .terms-text a {
-        color: #007bff;
-        text-decoration: none;
-      }
-
-      .signup-link {
-        text-align: center;
-        font-size: 14px;
-        color: #666;
-      }
-
-      .signup-link a {
-        color: #007bff;
-        text-decoration: none;
-        font-weight: 500;
-      }
-
-      /* Email Form Styles */
-      .login-form {
-        display: none;
-      }
-
-      .login-form.active {
-        display: block;
-      }
-
-      .password-input-container {
-        position: relative;
-        display: flex;
-        align-items: center;
-        border: 1px solid #ddd;
-        border-radius: 8px;
-        height: 50px;
-        background-color: white;
-      }
-
-      .password-input-container:focus-within {
-        border-color: #007bff;
-        box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-      }
-
-      .password-input-container input {
-        flex: 1;
-        border: none !important;
-        outline: none !important;
-        padding: 0 12px !important;
-        height: 100% !important;
-        background: transparent !important;
-        box-shadow: none !important;
-      }
-
-      .password-toggle {
-        padding: 0 12px;
-        background: none;
-        border: none;
-        color: #666;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        height: 100%;
-      }
-
-      .back-btn {
-        color: #666;
-        text-decoration: none;
-        font-size: 14px;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        margin-top: 20px;
-      }
-
-      .back-btn:hover {
-        color: #007bff;
-      }
-
-      /* Success Modal Styles */
-      .success-modal .modal-content {
-        border-radius: 20px;
-        padding: 10px 20px 30px;
-        max-width: 400px;
-        margin: 0 auto;
-      }
-
-      .success-title {
-        font-size: 24px;
-        font-weight: 600;
-        color: #333;
-        margin-bottom: 20px;
-      }
-
-      .car-illustration {
-        margin: 20px 0;
-      }
-
-      .car-illustration svg {
-        width: 200px;
-        height: 120px;
-        margin: 0 auto;
-        display: block;
-      }
-
-      .success-subtitle {
-        font-size: 16px;
-        color: #666;
-        margin: 20px 0;
-      }
-
-      .explore-btn {
-        background-color: #007bff;
-        border: none;
-        border-radius: 25px;
-        padding: 12px 40px;
-        font-weight: 500;
-        font-size: 16px;
-        transition: all 0.3s ease;
-      }
-
-      .explore-btn:hover {
-        background-color: #0056b3;
-        transform: translateY(-1px);
-      }
-
-      /* Modal Styles */
-      .modal-content {
-        border-radius: 15px;
-        border: none;
-      }
-
-      .otp-inputs {
-        display: flex;
-        gap: 10px;
-        justify-content: center;
-        margin: 20px 0;
-      }
-
-      .otp-input {
-        width: 50px;
-        height: 50px;
-        text-align: center;
-        border: 2px solid #ddd;
-        border-radius: 8px;
-        font-size: 18px;
-        font-weight: 600;
-      }
-
-      .otp-input:focus {
-        border-color: #007bff;
-        outline: none;
-      }
-
-      .phone-illustration {
-        width: 80px;
-        height: 80px;
-        background: #f8f9fa;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0 auto 20px;
-        font-size: 24px;
-        color: #007bff;
-      }
-
-      /* Header Dropdown Z-index Fix */
-      .mega-dropdown {
-        z-index: 9999 !important;
-      }
-
-      .dropdown-menu {
-        z-index: 9999 !important;
-      }
-
-      /* Ensure header is above other content */
-      header {
-        z-index: 1000;
-        position: relative;
-      }
-
-      @media (max-width: 768px) {
-        .login-container {
-          margin: 0;
-          border-radius: 0;
-          height: 100vh;
-        }
-
-        .image-section {
-          display: none;
-        }
-
-        .form-section {
-          padding: 40px 30px;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="login.css" />
   </head>
   <body style="background-color: #f4f4f4">
     <!-- Header -->
@@ -396,7 +27,7 @@
           <!-- Section 1: Logo + Location (Left) -->
           <div class="d-flex align-items-center gap-3">
             <a href="../index.html">
-              <h2 class="mb-0 fw-bold text-dark">7 States</h2>
+              <h2 class="mb-0 fw-bold text-dark"><span class="text-red">7 States</span></h2>
             </a>
             <div class="dropdown d-none d-md-block">
               <button
@@ -944,7 +575,9 @@
             <div class="form-section">
               <!-- Mobile Login Form (Default) -->
               <div id="mobileLoginForm" class="login-form active">
-                <h2 class="login-title">Log in</h2>
+                <h2 class="login-title">
+                  <span class="text-red">Log in</span>
+                </h2>
 
                 <form>
                   <!-- Phone Number Input -->
@@ -1015,7 +648,9 @@
 
               <!-- Email Login Form -->
               <div id="emailLoginForm" class="login-form">
-                <h2 class="login-title">Log in</h2>
+                <h2 class="login-title">
+                  <span class="text-red">Log in</span>
+                </h2>
 
                 <form>
                   <div style="text-align: start" class="mb-3">
@@ -1084,7 +719,7 @@
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header border-0">
-            <h5 class="modal-title">Enter OTP</h5>
+            <h5 class="modal-title">Enter <span class="text-red">OTP</span></h5>
             <button
               type="button"
               class="btn-close"
@@ -1154,7 +789,7 @@
         <div class="modal-content success-modal">
           <div class="modal-header border-0 pb-0">
             <h3 class="success-title w-100 text-center mb-0">
-              You're all set!
+              <span class="text-red">You're all set!</span>
             </h3>
             <button
               type="button"
@@ -1577,7 +1212,7 @@
         <hr class="my-4" />
         <div class="text-center">
           <p class="mb-0 small">
-            Dubicars.com Â© 2022. All rights reserved. Address: 2513, Shatha
+            Dubicars.com © 2022. All rights reserved. Address: 2513, Shatha
             Tower, Media City, Dubai, UAE
           </p>
         </div>

@@ -1,3 +1,43 @@
+/* Theme Colors - Red and Green */
+.text-red {
+  color: #dc2626 !important;
+}
+
+.text-green {
+  color: #22c55e !important;
+}
+
+.border-green {
+  border-color: #22c55e !important;
+}
+
+/* Override Bootstrap Blue Colors */
+.text-primary {
+  color: #22c55e !important;
+}
+
+.bg-primary {
+  background-color: #22c55e !important;
+}
+
+.border-primary {
+  border-color: #22c55e !important;
+}
+
+.btn-primary {
+  background-color: #22c55e !important;
+  border-color: #22c55e !important;
+  color: white !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+  background-color: #16a34a !important;
+  border-color: #16a34a !important;
+  color: white !important;
+}
+
 /* Import Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
 
@@ -58,7 +98,7 @@ header h2 {
 }
 
 .dropdown-toggle:hover {
-  color: #2563eb;
+  color: #22c55e;
 }
 
 .dropdown-menu {
@@ -77,7 +117,7 @@ header h2 {
 
 .dropdown-item:hover {
   background-color: #f3f4f6;
-  color: #2563eb;
+  color: #22c55e;
 }
 
 /* Location Button */
@@ -107,15 +147,15 @@ header h2 {
 }
 
 .btn-primary {
-  background-color: #2563eb;
-  border-color: #2563eb;
+  background-color: #22c55e;
+  border-color: #22c55e;
   font-weight: 600;
   transition: all 0.3s ease;
 }
 
 .btn-primary:hover {
-  background-color: #1d4ed8;
-  border-color: #1d4ed8;
+  background-color: #16a34a;
+  border-color: #16a34a;
   transform: translateY(-1px);
 }
 
@@ -160,7 +200,7 @@ header h2 {
   border-radius: 20px;
   padding: 2rem;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  border: 2px solid #3b82f6;
+  border: 2px solid #22c55e;
 }
 
 /* Car Preview Card */
@@ -235,8 +275,8 @@ header h2 {
 }
 
 .action-btn:hover {
-  border-color: #3b82f6;
-  color: #3b82f6;
+  border-color: #22c55e;
+  color: #22c55e;
 }
 
 .action-blur {
@@ -271,20 +311,20 @@ header h2 {
 
 /* Post Ad Button */
 .post-ad-btn {
-  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  background: linear-gradient(135deg, #22c55e 0%, #22c55e 100%);
   border: none;
   border-radius: 12px;
   padding: 1rem 2rem;
   font-size: 1.1rem;
   font-weight: 600;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+  box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
 }
 
 .post-ad-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4);
-  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  box-shadow: 0 8px 20px rgba(34, 197, 94, 0.4);
+  background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
 }
 
 /* Footer Styles */
@@ -599,7 +639,7 @@ footer ul li a:hover {
 }
 
 .mega-dropdown .dropdown-item:hover {
-  color: #2563eb;
+  color: #22c55e;
   background-color: transparent;
   padding-left: 0.5rem;
 }

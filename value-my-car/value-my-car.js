@@ -483,7 +483,7 @@ function sellMyCar() {
   showAlert("Redirecting to sell your car page...", "success");
   // Redirect to sell car page
   setTimeout(() => {
-    window.location.href = "../sell-my-car/index.html";
+    window.location.href = "../sell-my-car/sell-my-car.html";
   }, 1500);
 }
 

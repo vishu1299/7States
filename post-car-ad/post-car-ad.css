@@ -1,3 +1,43 @@
+/* Theme Colors - Red and Green */
+.text-red {
+  color: #dc2626 !important;
+}
+
+.text-green {
+  color: #22c55e !important;
+}
+
+.border-green {
+  border-color: #22c55e !important;
+}
+
+/* Override Bootstrap Blue Colors */
+.text-primary {
+  color: #22c55e !important;
+}
+
+.bg-primary {
+  background-color: #22c55e !important;
+}
+
+.border-primary {
+  border-color: #22c55e !important;
+}
+
+.btn-primary {
+  background-color: #22c55e !important;
+  border-color: #22c55e !important;
+  color: white !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+  background-color: #16a34a !important;
+  border-color: #16a34a !important;
+  color: white !important;
+}
+
 /* Post Car Ad Styles */
 
 /* Form Container */
@@ -1117,13 +1157,13 @@
 }
 
 .contact-label.email:hover {
-  border-color: #007bff;
+  border-color: #22c55e;
   background-color: #f0f7ff;
 }
 
 .contact-checkbox:checked + .contact-label.email {
-  border-color: #007bff;
-  background-color: #007bff;
+  border-color: #22c55e;
+  background-color: #22c55e;
 }
 
 /* Step 5 - New Review & Submit Styles */
@@ -1200,7 +1240,7 @@
 }
 
 .step-circle.active {
-  background: #007bff;
+  background: #22c55e;
   color: white;
 }
 
@@ -1252,7 +1292,7 @@
 }
 
 .submit-btn-new {
-  background: #007bff;
+  background: #22c55e;
   border: none;
   padding: 12px 40px;
   font-size: 18px;
@@ -1262,9 +1302,9 @@
 }
 
 .submit-btn-new:hover {
-  background: #0056b3;
+  background: #16a34a;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+  box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
 }
 
 .review-section-new {
@@ -1669,7 +1709,7 @@
 }
 
 .dashboard-container {
-  max-width: 1200px;
+ width: 100%;
   margin: 0 auto;
   background: transparent;
   padding: 0;

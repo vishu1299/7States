@@ -409,7 +409,7 @@ function showNotification(message, type = "info") {
 
 // Navigation function for header
 function sellMyCar() {
-  window.location.href = "../sell-my-car/index.html";
+  window.location.href = "../sell-my-car/sell-my-car.html";
 }
 
 // Smooth scroll to sections

@@ -21,8 +21,17 @@ let currentFilters = {
 document.addEventListener("DOMContentLoaded", function () {
   console.log("DOM loaded, initializing...");
 
+  // Check login status and update UI on page load
+  updateAuthUI();
+
+  // Render car cards first
+  renderCarCards();
+
   // Setup event listeners for filters
   setupEventListeners();
+
+  // Setup card and heart functionality
+  setupCardInteractions();
 
   console.log("Initialization complete");
 });
@@ -282,10 +291,35 @@ function setupEventListeners() {
     });
 }
 
-// Apply all filters (simplified - no car data to filter)
+// Apply all filters
 function applyFilters() {
   console.log("Filters applied:", currentFilters);
-  // Filters are applied but no cars to display
+
+  // Filter the cars based on current filters
+  let filteredCars = carsData.filter((car) => {
+    // Search filter
+    if (
+      currentFilters.search &&
+      !car.title.toLowerCase().includes(currentFilters.search)
+    ) {
+      return false;
+    }
+
+    // Transmission filter
+    if (
+      currentFilters.transmission &&
+      car.transmission.toLowerCase() !==
+        currentFilters.transmission.toLowerCase()
+    ) {
+      return false;
+    }
+
+    // Add more filters as needed
+    return true;
+  });
+
+  // Re-render the filtered cars
+  renderFilteredCarCards(filteredCars);
 }
 
 // Clear all filters
@@ -308,17 +342,36 @@ function clearAllFilters() {
     sortBy: "relevance",
   };
 
-  // Reset form elements
-  document.getElementById("carSearch").value = "";
-  document.getElementById("makeFilter").value = "";
-  document.getElementById("modelFilter").value = "";
-  document.getElementById("sortBy").value = "relevance";
-  document.getElementById("minPrice").value = "";
-  document.getElementById("maxPrice").value = "";
-  document.getElementById("minYear").value = "";
-  document.getElementById("maxYear").value = "";
-  document.getElementById("minMileage").value = "";
-  document.getElementById("maxMileage").value = "";
+  // Reset form elements (with null checks)
+  const carSearch = document.getElementById("carSearch");
+  if (carSearch) carSearch.value = "";
+
+  const makeFilter = document.getElementById("makeFilter");
+  if (makeFilter) makeFilter.value = "";
+
+  const modelFilter = document.getElementById("modelFilter");
+  if (modelFilter) modelFilter.value = "";
+
+  const sortBy = document.getElementById("sortBy");
+  if (sortBy) sortBy.value = "relevance";
+
+  const minPrice = document.getElementById("minPrice");
+  if (minPrice) minPrice.value = "";
+
+  const maxPrice = document.getElementById("maxPrice");
+  if (maxPrice) maxPrice.value = "";
+
+  const minYear = document.getElementById("minYear");
+  if (minYear) minYear.value = "";
+
+  const maxYear = document.getElementById("maxYear");
+  if (maxYear) maxYear.value = "";
+
+  const minMileage = document.getElementById("minMileage");
+  if (minMileage) minMileage.value = "";
+
+  const maxMileage = document.getElementById("maxMileage");
+  if (maxMileage) maxMileage.value = "";
 
   // Reset dropdown selectors
   document.getElementById("minPriceSelect") &&
@@ -360,8 +413,13 @@ function clearAllFilters() {
     ?.classList.add("active");
 
   // Clear selected filter badges
-  document.querySelector(".selected-filters") &&
-    (document.querySelector(".selected-filters").innerHTML = "");
+  const selectedFilters = document.querySelector(".selected-filters");
+  if (selectedFilters) {
+    selectedFilters.innerHTML = "";
+  }
+
+  // Re-render all cars
+  renderCarCards();
 
   console.log("All filters cleared");
 }
@@ -389,7 +447,7 @@ const carsData = [
     transmission: "Manual",
     price: "AED 111,400",
     address: "Industrial Area 3, Dubai, UAE",
-    image: "../images/productimages/image 19.png",
+    image: "../images/productimages/image 20.png",
     alt: "Audi A4 Premium Plus",
   },
   {
@@ -401,7 +459,7 @@ const carsData = [
     transmission: "Manual",
     price: "AED 150,800",
     address: "Industrial Area 3, Dubai, UAE",
-    image: "../images/productimages/image 19.png",
+    image: "../images/productimages/image 34.png",
     alt: "Audi Q3 Sportback",
   },
   {
@@ -413,7 +471,7 @@ const carsData = [
     transmission: "Automatic",
     price: "AED 195,000",
     address: "Al Quoz, Dubai, UAE",
-    image: "../images/productimages/image 19.png",
+    image: "../images/productimages/image 35.png",
     alt: "BMW X3",
   },
   {
@@ -425,7 +483,7 @@ const carsData = [
     transmission: "Automatic",
     price: "AED 175,500",
     address: "Business Bay, Dubai, UAE",
-    image: "../images/productimages/image 19.png",
+    image: "../images/productimages/image 36.png",
     alt: "Mercedes C-Class",
   },
   {
@@ -437,7 +495,7 @@ const carsData = [
     transmission: "Automatic",
     price: "AED 125,000",
     address: "Deira, Dubai, UAE",
-    image: "../images/productimages/image 19.png",
+    image: "../images/productimages/image 37.png",
     alt: "Toyota Camry",
   },
   {
@@ -449,7 +507,7 @@ const carsData = [
     transmission: "Automatic",
     price: "AED 98,000",
     address: "Jumeirah, Dubai, UAE",
-    image: "../images/productimages/image 19.png",
+    image: "../images/productimages/image 38.png",
     alt: "Honda Accord",
   },
   {
@@ -461,7 +519,7 @@ const carsData = [
     transmission: "CVT",
     price: "AED 89,500",
     address: "Motor City, Dubai, UAE",
-    image: "../images/productimages/image 19.png",
+    image: "../images/productimages/image 40.png",
     alt: "Nissan Altima",
   },
   {
@@ -473,16 +531,29 @@ const carsData = [
     transmission: "Automatic",
     price: "AED 165,000",
     address: "Downtown Dubai, UAE",
-    image: "../images/productimages/image 19.png",
+    image: "../images/productimages/image 41.png",
     alt: "Lexus ES",
   },
 ];
 
 // Function to render car cards
 function renderCarCards() {
+  console.log("Rendering car cards...");
+  renderFilteredCarCards(carsData);
+}
+
+// Function to render filtered car cards
+function renderFilteredCarCards(cars) {
   const carListingsContainer = document.getElementById("car-listings");
 
-  const carCardsHTML = carsData
+  if (!carListingsContainer) {
+    console.error("Car listings container not found!");
+    return;
+  }
+
+  console.log("Rendering", cars.length, "cars");
+
+  const carCardsHTML = cars
     .map(
       (car) => `
     <div class="col-lg-4 col-md-6">
@@ -501,7 +572,6 @@ function renderCarCards() {
             style="
               background-color: rgba(128, 128, 128, 0.234);
               border-radius: 10px;
-
               font-size: 12px;
             "
             class="spec-item p-2"
@@ -534,6 +604,7 @@ function renderCarCards() {
     .join("");
 
   carListingsContainer.innerHTML = carCardsHTML;
+  console.log("Car cards rendered successfully");
 }
 
 // Authentication functions
@@ -658,14 +729,8 @@ function simulateLogin(userId, userName, userEmail) {
   alert(`Login simulated! You are now logged in as ${userData.name}`);
 }
 
-// Add heart click functionality and card navigation for new card design
-document.addEventListener("DOMContentLoaded", function () {
-  // Check login status and update UI on page load
-  updateAuthUI();
-
-  // Render car cards first
-  renderCarCards();
-
+// Setup card interactions
+function setupCardInteractions() {
   // Logout button event listeners
   const desktopLogoutBtn = document.getElementById("desktop-logout-btn");
   const mobileLogoutBtn = document.getElementById("mobile-logout-btn");
@@ -715,11 +780,11 @@ document.addEventListener("DOMContentLoaded", function () {
       if (icon.classList.contains("far")) {
         icon.classList.remove("far");
         icon.classList.add("fas");
-        icon.style.color = "#ff4757";
+        icon.style.color = "#22c55e";
       } else {
         icon.classList.remove("fas");
         icon.classList.add("far");
-        icon.style.color = "#90EE90";
+        icon.style.color = "";
       }
     }
   });
@@ -735,18 +800,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
   });
-});
+}
 
 // Global function to simulate login (for testing - you can call this from browser console)
 window.simulateLogin = simulateLogin;
-
-// Simulate login for testing
-localStorage.setItem(
-  "loggedInUser",
-  JSON.stringify({
-    id: 1,
-    name: "Your Name",
-    email: "your.email@example.com",
-  })
-);
-location.reload();

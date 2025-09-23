@@ -1,3 +1,43 @@
+/* Theme Colors - Red and Green */
+.text-red {
+  color: #dc2626 !important;
+}
+
+.text-green {
+  color: #22c55e !important;
+}
+
+.border-green {
+  border-color: #22c55e !important;
+}
+
+/* Override Bootstrap Blue Colors */
+.text-primary {
+  color: #22c55e !important;
+}
+
+.bg-primary {
+  background-color: #22c55e !important;
+}
+
+.border-primary {
+  border-color: #22c55e !important;
+}
+
+.btn-primary {
+  background-color: #22c55e !important;
+  border-color: #22c55e !important;
+  color: white !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+  background-color: #16a34a !important;
+  border-color: #16a34a !important;
+  color: white !important;
+}
+
 /* Reset and Base Styles */
 * {
   box-sizing: border-box;
@@ -50,7 +90,7 @@ header h2 {
 }
 
 .dropdown-toggle:hover {
-  color: #2563eb;
+  color: #22c55e;
 }
 
 .dropdown-menu {
@@ -69,7 +109,7 @@ header h2 {
 
 .dropdown-item:hover {
   background-color: #f3f4f6;
-  color: #2563eb;
+  color: #22c55e;
 }
 
 .btn-outline-secondary {
@@ -116,7 +156,7 @@ header h2 {
 }
 
 .mega-dropdown .dropdown-item:hover {
-  color: #2563eb;
+  color: #22c55e;
   background-color: transparent;
   padding-left: 0.5rem;
 }
@@ -139,7 +179,7 @@ main {
 }
 
 .breadcrumb-item a:hover {
-  color: #2563eb;
+  color: #22c55e;
 }
 
 .breadcrumb-item.active {
@@ -205,7 +245,7 @@ main {
 
 .thumbnail-image:hover,
 .thumbnail-image.active {
-  border-color: #2563eb;
+  border-color: #22c55e;
 }
 
 /* Car Details Card */
@@ -266,8 +306,8 @@ main {
 }
 
 .form-check-input:checked {
-  background-color: #2563eb;
-  border-color: #2563eb;
+  background-color: #22c55e;
+  border-color: #22c55e;
 }
 
 /* Posted By Section */
@@ -390,7 +430,7 @@ main {
 
 .feature-icon {
   font-size: 2rem;
-  color: #2563eb;
+  color: #22c55e;
 }
 
 .feature-name {
@@ -440,15 +480,15 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid #2563eb;
-  color: #2563eb;
+  border: 2px solid #22c55e;
+  color: #22c55e;
   background: white;
   transition: all 0.3s ease;
 }
 
 .similar-next:hover,
 .similar-prev:hover {
-  background: #2563eb;
+  background: #22c55e;
   color: white;
   transform: scale(1.1);
 }
@@ -470,12 +510,12 @@ main {
 }
 
 .thumbnail-image:hover {
-  border-color: #2563eb;
+  border-color: #22c55e;
   opacity: 0.8;
 }
 
 .thumbnail-image.active {
-  border-color: #2563eb;
+  border-color: #22c55e;
   opacity: 1;
 }
 
@@ -800,7 +840,7 @@ footer ul li a:hover {
 
 .similar-cars-navigation .btn:hover {
   transform: scale(1.1);
-  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+  box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
 }
 
 .similar-cars-navigation .btn.swiper-button-disabled {

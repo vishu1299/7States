@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -17,6 +17,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
+    <link rel="stylesheet" href="signup.css" />
     <style>
       body {
         margin: 0;
@@ -107,8 +108,8 @@
       }
 
       .phone-input-container:focus-within {
-        border-color: #007bff;
-        box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+        border-color: #22c55e;
+        box-shadow: 0 0 0 0.2rem rgba(34, 197, 94, 0.25);
       }
 
       /* Email and Password Input Styles */
@@ -122,8 +123,8 @@
       }
 
       .form-control:focus {
-        border-color: #007bff !important;
-        box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25) !important;
+        border-color: #22c55e !important;
+        box-shadow: 0 0 0 0.2rem rgba(34, 197, 94, 0.25) !important;
         outline: none !important;
       }
 
@@ -132,17 +133,40 @@
       }
 
       .continue-btn {
-        height: 50px;
-        background-color: #007bff;
-        border: none;
-        border-radius: 8px;
-        font-weight: 600;
-        font-size: 16px;
-        margin-bottom: 20px;
+        height: 50px !important;
+        background-color: #22c55e !important;
+        border: none !important;
+        border-radius: 8px !important;
+        font-weight: 600 !important;
+        font-size: 16px !important;
+        margin-bottom: 20px !important;
+        color: white !important;
       }
 
-      .continue-btn:hover {
-        background-color: #0056b3;
+      .continue-btn:hover,
+      .continue-btn:focus,
+      .continue-btn:active {
+        background-color: #16a34a !important;
+        border-color: #16a34a !important;
+        color: white !important;
+        box-shadow: none !important;
+      }
+
+      /* Override Bootstrap Primary Button */
+      .btn-primary {
+        background-color: #22c55e !important;
+        border-color: #22c55e !important;
+        color: white !important;
+      }
+
+      .btn-primary:hover,
+      .btn-primary:focus,
+      .btn-primary:active,
+      .btn-primary.active {
+        background-color: #16a34a !important;
+        border-color: #16a34a !important;
+        color: white !important;
+        box-shadow: none !important;
       }
 
       .divider {
@@ -193,7 +217,7 @@
       }
 
       .terms-text a {
-        color: #007bff;
+        color: #22c55e;
         text-decoration: none;
       }
 
@@ -204,7 +228,7 @@
       }
 
       .signup-link a {
-        color: #007bff;
+        color: #22c55e;
         text-decoration: none;
         font-weight: 500;
       }
@@ -275,7 +299,7 @@
       }
 
       .back-btn:hover {
-        color: #007bff;
+        color: #22c55e;
       }
 
       /* Modal Styles */
@@ -302,7 +326,7 @@
       }
 
       .otp-input:focus {
-        border-color: #007bff;
+        border-color: #22c55e;
         outline: none;
       }
 
@@ -316,14 +340,14 @@
         justify-content: center;
         margin: 0 auto 20px;
         font-size: 24px;
-        color: #007bff;
+        color: #22c55e;
       }
 
       /* OTP Method Selection Styles */
       .otp-icon {
         width: 60px;
         height: 60px;
-        background: linear-gradient(135deg, #007bff, #0056b3);
+        background: linear-gradient(135deg, #22c55e, #16a34a);
         border-radius: 50%;
         display: flex;
         align-items: center;
@@ -351,13 +375,13 @@
       }
 
       .method-option:hover {
-        border-color: #007bff;
-        background: #f8f9ff;
+        border-color: #22c55e;
+        background: #f0fdf4;
       }
 
       .method-option.active {
-        border-color: #007bff;
-        background: #f8f9ff;
+        border-color: #22c55e;
+        background: #f0fdf4;
       }
 
       .method-icon {
@@ -374,7 +398,7 @@
       }
 
       .method-option.active .method-icon {
-        background: #007bff;
+        background: #22c55e;
         color: white;
       }
 
@@ -395,7 +419,7 @@
       }
 
       .method-radio {
-        color: #007bff;
+        color: #22c55e;
         font-size: 20px;
       }
 
@@ -467,7 +491,7 @@
       }
 
       .explore-btn {
-        background: #007bff;
+        background: #22c55e;
         border: none;
         border-radius: 25px;
         padding: 12px 50px;
@@ -479,7 +503,7 @@
       }
 
       .explore-btn:hover {
-        background: #0056b3;
+        background: #16a34a;
         color: white;
       }
 
@@ -523,7 +547,9 @@
           <!-- Section 1: Logo + Location (Left) -->
           <div class="d-flex align-items-center gap-3">
             <a href="../index.html">
-              <h2 class="mb-0 fw-bold text-dark">7 States</h2>
+              <h2 class="mb-0 fw-bold text-dark">
+                <span class="text-red">7 States</span>
+              </h2>
             </a>
             <div class="dropdown d-none d-md-block">
               <button
@@ -1071,7 +1097,9 @@
             <div class="form-section">
               <!-- Mobile Signup Form (Default) -->
               <div id="mobileSignupForm" class="login-form active">
-                <h2 class="login-title">Sign Up</h2>
+                <h2 class="login-title">
+                  <span class="text-red">Sign Up</span>
+                </h2>
 
                 <form onsubmit="handleSignup(event)">
                   <!-- Phone Number Input -->
@@ -1182,7 +1210,9 @@
 
               <!-- Email Signup Form -->
               <div id="emailSignupForm" class="login-form">
-                <h2 class="login-title">Sign Up</h2>
+                <h2 class="login-title">
+                  <span class="text-red">Sign Up</span>
+                </h2>
 
                 <form>
                   <div class="mb-3">
@@ -1274,7 +1304,9 @@
             <div class="otp-icon mb-3">
               <i class="fas fa-shield-alt"></i>
             </div>
-            <h5 class="modal-title mb-2">Verify Your Account</h5>
+            <h5 class="modal-title mb-2">
+              Verify Your <span class="text-red">Account</span>
+            </h5>
             <p class="text-muted mb-4">
               Choose how you'd like to receive your verification code
             </p>
@@ -1417,7 +1449,7 @@
         <div class="modal-content success-modal">
           <div class="modal-header border-0 pb-0">
             <h3 class="success-title w-100 text-center mb-0">
-              You're all set!
+              You're <span class="text-red">all set!</span>
             </h3>
             <button
               type="button"
@@ -1456,7 +1488,7 @@
                 <!-- Windshield -->
                 <path
                   d="M85 100 Q95 85 110 85 L190 85 Q205 85 215 100"
-                  fill="#87CEEB"
+                  fill="#22c55e"
                   opacity="0.8"
                 />
 
@@ -1467,7 +1499,7 @@
                   width="45"
                   height="20"
                   rx="3"
-                  fill="#87CEEB"
+                  fill="#22c55e"
                   opacity="0.8"
                 />
                 <rect
@@ -1476,7 +1508,7 @@
                   width="45"
                   height="20"
                   rx="3"
-                  fill="#87CEEB"
+                  fill="#22c55e"
                   opacity="0.8"
                 />
 
@@ -1895,7 +1927,7 @@
         <div class="row align-items-center">
           <div class="col-md-6">
             <p class="mb-0 text-white-50">
-              Â© 2024 7 States. All rights reserved.
+              © 2024 7 States. All rights reserved.
             </p>
           </div>
           <div class="col-md-6 text-md-end">
