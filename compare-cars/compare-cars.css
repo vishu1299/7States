@@ -1,0 +1,481 @@
+/* Compare Cars Page Styles */
+
+/* Theme Colors - Red and Green */
+.text-red {
+  color: #dc2626 !important;
+}
+
+.text-green {
+  color: #22c55e !important;
+}
+
+.border-green {
+  border-color: #22c55e !important;
+}
+
+/* Override Bootstrap Blue Colors */
+.text-primary {
+  color: #22c55e !important;
+}
+
+.bg-primary {
+  background-color: #22c55e !important;
+}
+
+.border-primary {
+  border-color: #22c55e !important;
+}
+
+.btn-primary {
+  background-color: #22c55e !important;
+  border-color: #22c55e !important;
+  color: white !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+  background-color: #16a34a !important;
+  border-color: #16a34a !important;
+  color: white !important;
+}
+
+/* Header Styles */
+.mega-dropdown {
+  min-width: 800px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999 !important;
+}
+
+/* Compare Cards */
+.compare-card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  min-height: 300px;
+}
+
+.compare-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.compare-card-header {
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+.card-number {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.compare-card-body {
+  padding: 40px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+}
+
+.add-car-placeholder {
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.add-car-placeholder:hover {
+  background: #f8f9fa;
+  transform: scale(1.05);
+}
+
+.selected-car {
+  text-align: center;
+}
+
+.selected-car img {
+  width: 120px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.selected-car h6 {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.selected-car p {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.remove-car {
+  background: #dc2626;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 5px 15px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.remove-car:hover {
+  background: #b91c1c;
+}
+
+/* Comparison Items */
+.comparison-item {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.comparison-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.car-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+  min-height: 100px;
+  justify-content: center;
+}
+
+.car-thumb {
+  width: 80px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.car-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.2;
+  max-width: 100px;
+  min-height: 17px;
+}
+
+.vs-badge {
+  margin: 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 50px;
+}
+
+.vs-badge .badge {
+  font-size: 12px;
+  padding: 8px 12px;
+  border-radius: 20px;
+}
+
+/* Ensure consistent comparison layout */
+.comparison-item .d-flex {
+  align-items: stretch;
+  min-height: 120px;
+}
+
+.comparison-item .car-info {
+  width: 100px;
+  flex-shrink: 0;
+}
+
+/* Body Type Filter */
+.btn-group .btn {
+  border-radius: 25px !important;
+  margin: 0 5px;
+  padding: 8px 20px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.btn-group .btn.active {
+  background-color: #22c55e !important;
+  border-color: #22c55e !important;
+  color: white !important;
+}
+
+.btn-group .btn:not(.active) {
+  background-color: white;
+  border-color: #dee2e6;
+  color: #6c757d;
+}
+
+.btn-group .btn:not(.active):hover {
+  background-color: #f8f9fa;
+  border-color: #22c55e;
+  color: #22c55e;
+}
+
+/* Pagination */
+.pagination .page-link {
+  border-radius: 50% !important;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 5px;
+  border: 1px solid #dee2e6;
+  color: #6c757d;
+}
+
+.pagination .page-item.active .page-link {
+  background-color: #22c55e !important;
+  border-color: #22c55e !important;
+  color: white !important;
+}
+
+.pagination .page-link:hover {
+  background-color: #f8f9fa;
+  border-color: #22c55e;
+  color: #22c55e;
+}
+
+/* Modal Styles */
+.modal-content {
+  border-radius: 15px;
+  border: none;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+  border-bottom: 1px solid #f1f3f4;
+  padding: 20px 30px;
+}
+
+.modal-body {
+  padding: 30px;
+}
+
+.car-option {
+  background: white;
+  border: 2px solid #f1f3f4;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.car-option:hover {
+  border-color: #22c55e;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(34, 197, 94, 0.2);
+}
+
+.car-option img {
+  width: 100px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.car-option h6 {
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.car-option p {
+  color: #666;
+  font-size: 14px;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .compare-card {
+    min-height: 250px;
+  }
+
+  .compare-card-body {
+    padding: 30px 15px;
+    min-height: 150px;
+  }
+
+  .comparison-item {
+    padding: 15px;
+  }
+
+  .car-thumb {
+    width: 60px;
+    height: 45px;
+  }
+
+  .car-name {
+    font-size: 12px;
+  }
+
+  .vs-badge {
+    margin: 0 10px;
+  }
+
+  .btn-group .btn {
+    font-size: 12px;
+    padding: 6px 15px;
+    margin: 2px;
+  }
+}
+
+@media (max-width: 576px) {
+  .car-info {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .car-thumb {
+    margin-right: 10px;
+    margin-bottom: 0;
+  }
+
+  .vs-badge {
+    margin: 0 5px;
+  }
+
+  .vs-badge .badge {
+    font-size: 10px;
+    padding: 6px 10px;
+  }
+}
+
+/* Swiper Carousel Styles */
+.swiper {
+  width: 100%;
+  height: 100%;
+  padding: 20px 0;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  padding: 0 10px;
+  height: auto;
+}
+
+.swiper-slide .comparison-item {
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto;
+  min-height: 200px;
+}
+
+/* Custom Navigation Buttons */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #22c55e !important;
+  background: white;
+  width: 50px !important;
+  height: 50px !important;
+  border-radius: 50%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background: #22c55e;
+  color: white !important;
+  transform: scale(1.1);
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 18px !important;
+  font-weight: bold;
+}
+
+/* Position navigation buttons */
+.popular-next,
+.featured-next {
+  right: -25px;
+}
+
+.popular-prev,
+.featured-prev {
+  left: -25px;
+}
+
+/* Swiper Pagination */
+.swiper-pagination-bullet {
+  background: #22c55e !important;
+  opacity: 0.3;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+/* Auto-rotation indicator */
+.swiper-pagination-progressbar-fill {
+  background: #22c55e !important;
+}
+
+/* Responsive Swiper */
+@media (max-width: 768px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    font-size: 14px !important;
+  }
+
+  .popular-next,
+  .featured-next {
+    right: -20px;
+  }
+
+  .popular-prev,
+  .featured-prev {
+    left: -20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none;
+  }
+
+  .swiper {
+    padding: 20px 0 40px 0;
+  }
+}
